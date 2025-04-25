@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPS 랜덤 총기 팀 데스매치</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden { display: none; }
+    .active-button { background-color: #4B5563 !important; color: white !important; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+
+    <h1 class="text-3xl font-bold">FPS 랜덤 총기 팀 데스매치</h1>
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <p class="text-lg">플레이어는 사망할 때마다 무작위 총기를 지급받으며, 팀으로 나뉘어 전투를 벌입니다.</p>
+      <p class="text-lg">한 팀이 <strong>100킬</strong>을 먼저 달성하면 승리합니다.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-6">
+      <button onclick="filterGuns('all', this)" class="filter-btn px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">전체</button>
+      <button onclick="filterGuns('ar', this)" class="filter-btn px-4 py-2 bg-red-400 text-white rounded hover:bg-red-500">돌격소총</button>
+      <button onclick="filterGuns('smg', this)" class="filter-btn px-4 py-2 bg-blue-400 text-white rounded hover:bg-blue-500">기관단총</button>
+      <button onclick="filterGuns('shotgun', this)" class="filter-btn px-4 py-2 bg-green-400 text-white rounded hover:bg-green-500">산탄총</button>
+      <button onclick="filterGuns('sniper', this)" class="filter-btn px-4 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500">저격소총</button>
+      <button onclick="filterGuns('special', this)" class="filter-btn px-4 py-2 bg-purple-400 text-white rounded hover:bg-purple-500">특수총</button>
+    </div>
+
+    <div id="guns-list" class="space-y-10">
+
+      <!-- 돌격소총 -->
+      <div class="gun-group" data-type="ar">
+        <h3 class="text-xl font-semibold">🔫 돌격소총</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 기존 돌격소총 카드들 -->
+          <!-- AKM -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/ak47.png" class="w-24 h-24 mx-auto" alt="AKM">
+            <p class="font-bold text-lg">AKM</p>
+            <p class="text-sm text-gray-600">반동은 높지만 높은 데미지를 지닌 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 35 / 헤드샷: 150%</p>
+          </div>
+          <!-- AK103 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/ak103.png" class="w-24 h-24 mx-auto" alt="AK103">
+            <p class="font-bold text-lg">AK103</p>
+            <p class="text-sm text-gray-600">강력한 화력을 가진 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 40 / 헤드샷: 260%</p>
+          </div>
+          <!-- M4A1 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/m4a1.png" class="w-24 h-24 mx-auto" alt="M4A1">
+            <p class="font-bold text-lg">M4A1</p>
+            <p class="text-sm text-gray-600">안정적이고 밸런스 좋은 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 20 / 헤드샷: 150%</p>
+          </div>
+          <!-- M16A1 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/m16a1.png" class="w-24 h-24 mx-auto" alt="M16A1">
+            <p class="font-bold text-lg">M16A1</p>
+            <p class="text-sm text-gray-600">낮은 반동과 높은 정확도</p>
+            <p class="text-sm text-gray-600">데미지: 25 / 헤드샷: 150%</p>
+          </div>
+          <!-- HK416 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/hk416d.png" class="w-24 h-24 mx-auto" alt="HK416">
+            <p class="font-bold text-lg">HK416</p>
+            <p class="text-sm text-gray-600">균형 잡힌 다목적 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 35 / 헤드샷: 130%</p>
+          </div>
+          <!-- Mk14 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/mk14.png" class="w-24 h-24 mx-auto" alt="Mk14">
+            <p class="font-bold text-lg">Mk14</p>
+            <p class="text-sm text-gray-600">반자동 모드 전환 가능</p>
+            <p class="text-sm text-gray-600">데미지: 34 / 헤드샷: 150%</p>
+          </div>
+          <!-- Scar -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/scar_l.png" class="w-24 h-24 mx-auto" alt="Scar">
+            <p class="font-bold text-lg">Scar</p>
+            <p class="text-sm text-gray-600">범용성과 안정성이 높은 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 32 / 헤드샷: 180%</p>
+          </div>
+          <!-- SKS -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/sks_tactical.png" class="w-24 h-24 mx-auto" alt="SKS">
+            <p class="font-bold text-lg">SKS</p>
+            <p class="text-sm text-gray-600">반자동 중거리 소총</p>
+            <p class="text-sm text-gray-600">데미지: 32 / 헤드샷: 200%</p>
+          </div>
+          <!-- M249 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/m249.png" class="w-24 h-24 mx-auto" alt="M249">
+            <p class="font-bold text-lg">M249</p>
+            <p class="text-sm text-gray-600">분대 지원 기관총</p>
+            <p class="text-sm text-gray-600">데미지: 30 / 헤드샷: 150%</p>
+          </div>
+          <!-- QBZ-95 -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/qbz_95.png" class="w-24 h-24 mx-auto" alt="QBZ-95">
+            <p class="font-bold text-lg">QBZ-95</p>
+            <p class="text-sm text-gray-600">불펍형 중국 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 32 / 헤드샷: 160%</p>
+          </div>
+          <!-- Minigun -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/mini.png" class="w-24 h-24 mx-auto" alt="Minigun">
+            <p class="font-bold text-lg">Minigun</p>
+            <p class="text-sm text-gray-600">초고속 연사 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 25 / 헤드샷: 200%</p>
+          </div>
+          <!-- AS-Val -->
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/asval.png" class="w-24 h-24 mx-auto" alt="AS-Val">
+            <p class="font-bold text-lg">AS-Val</p>
+            <p class="text-sm text-gray-600">소음기 일체형 돌격소총</p>
+            <p class="text-sm text-gray-600">데미지: 37 / 헤드샷: 165%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기관단총 -->
+      <div class="gun-group" data-type="smg">
+        <h3 class="text-xl font-semibold">🔥 기관단총</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/p90.png" class="w-24 h-24 mx-auto" alt="P90">
+            <p class="font-bold text-lg">P90</p>
+            <p class="text-sm text-gray-600">빠른 연사속도를 가진 근접전 특화 무기</p>
+            <p class="text-sm text-gray-600">데미지: 22 / 헤드샷: 125%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/ump45.png" class="w-24 h-24 mx-auto" alt="UMP-45">
+            <p class="font-bold text-lg">UMP-45</p>
+            <p class="text-sm text-gray-600">높은 데미지를 가진 저속 기관단총</p>
+            <p class="text-sm text-gray-600">데미지: 22 / 헤드샷: 150%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/vector45.png" class="w-24 h-24 mx-auto" alt="Vector">
+            <p class="font-bold text-lg">Vector</p>
+            <p class="text-sm text-gray-600">가장 빠른 연사속도를 가진 기관단총</p>
+            <p class="text-sm text-gray-600">데미지: 22 / 헤드샷: 125%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/hk_mp5a5.png" class="w-24 h-24 mx-auto" alt="MP5">
+            <p class="font-bold text-lg">MP5</p>
+            <p class="text-sm text_gray-600">안정성과 정확도가 높은 기관단총</p>
+            <p class="text-sm text-gray-600">데미지: 24 / 헤드샷: 160%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 산탄총 -->
+      <div class="gun-group" data-type="shotgun">
+        <h3 class="text-xl font-semibold">💥 산탄총</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/aa12.png" class="w-24 h-24 mx-auto" alt="AA12">
+            <p class="font-bold text-lg">AA12</p>
+            <p class="text-sm text-gray-600">자동 발사 기능을 가진 강력한 산탄총</p>
+            <p class="text-sm text-gray-600">데미지: 7x10 / 헤드샷: 133%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/m870.png" class="w-24 h-24 mx-auto" alt="M870">
+            <p class="font-bold text-lg">M870</p>
+            <p class="text-sm text-gray-600">클래식한 펌프 액션 산탄총</p>
+            <p class="text-sm text-gray-600">데미지: 10x10 / 헤드샷: 133%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 저격소총 -->
+      <div class="gun-group" data-type="sniper">
+        <h3 class="text-xl font-semibold">🎯 저격소총</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/ai_awp.png" class="w-24 h-24 mx-auto" alt="AWM">
+            <p class="font-bold text-lg">AWM</p>
+            <p class="text-sm text-gray-600">높은 데미지와 정확도를 가진 저격소총</p>
+            <p class="text-sm text-gray-600">데미지: 100 / 헤드샷: 200%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/m95.png" class="w-24 h-24 mx-auto" alt="M95">
+            <p class="font-bold text-lg">M95</p>
+            <p class="text-sm text-gray-600">전신을 관통하는 대물 저격소총</p>
+            <p class="text-sm text-gray-600">데미지: 100 / 헤드샷: 250%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/b101.png" class="w-24 h-24 mx-auto" alt="B101">
+            <p class="font-bold text-lg">B101</p>
+            <p class="text-sm text-gray-600">고속 탄환을 사용하는 저격소총</p>
+            <p class="text-sm text-gray-600">데미지: 100 / 헤드샷: 250%</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/ssg08.png" class="w-24 h-24 mx-auto" alt="SSG-08">
+            <p class="font-bold text-lg">SSG-08</p>
+            <p class="text-sm text-gray-600">경량화된 스나이퍼 라이플</p>
+            <p class="text-sm text-gray-600">데미지: 100 / 헤드샷: 250%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 특수총 -->
+      <div class="gun-group" data-type="special">
+        <h3 class="text-xl font-semibold">⭐ 특수총</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-xl shadow text-center">
+            <img src="images/deagle_golden.png" class="w-24 h-24 mx-auto" alt="황금총">
+            <p class="font-bold text-lg">황금총</p>
+            <p class="text-sm text-gray-600">외형과 성능이 모두 특별한 고급 권총</p>
+            <p class="text-sm text-gray-600">데미지: 200 / 헤드샷: 180%</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 랭크 시스템 -->
+<div class="space-y-10 mt-16">
+  <h2 class="text-2xl font-bold">🏆 랭크 시스템</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/bronze.png" class="w-20 h-20 mx-auto" alt="브론즈">
+      <p class="font-bold text-base mt-2">브론즈</p>
+      <p class="text-xs text-gray-600">0 ~ 4,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/silver.png" class="w-20 h-20 mx-auto" alt="실버">
+      <p class="font-bold text-base mt-2">실버</p>
+      <p class="text-xs text-gray-600">5,000 ~ 9,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/gold.png" class="w-20 h-20 mx-auto" alt="골드">
+      <p class="font-bold text-base mt-2">골드</p>
+      <p class="text-xs text-gray-600">10,000 ~ 14,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/platinum.png" class="w-20 h-20 mx-auto" alt="플래티넘">
+      <p class="font-bold text-base mt-2">플래티넘</p>
+      <p class="text-xs text-gray-600">15,000 ~ 19,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/diamond.png" class="w-20 h-20 mx-auto" alt="다이아몬드">
+      <p class="font-bold text-base mt-2">다이아몬드</p>
+      <p class="text-xs text-gray-600">20,000 ~ 24,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/master.png" class="w-20 h-20 mx-auto" alt="마스터">
+      <p class="font-bold text-base mt-2">마스터</p>
+      <p class="text-xs text-gray-600">25,000 ~ 29,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/grandmaster.png" class="w-20 h-20 mx-auto" alt="그랜드 마스터">
+      <p class="font-bold text-base mt-2">그랜드 마스터</p>
+      <p class="text-xs text-gray-600">30,000 ~ 34,999 RP</p>
+    </div>
+
+    <div class="bg-white p-3 rounded-xl shadow text-center">
+      <img src="images/challenger.png" class="w-20 h-20 mx-auto" alt="챌린저">
+      <p class="font-bold text-base mt-2">챌린저</p>
+      <p class="text-xs text-gray-600">35,000+ RP</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- 시즌 1 보상 -->
+<div class="space-y-10 mt-16">
+  <h2 class="text-2xl font-bold">🎁 시즌 1 보상</h2>
+  <div class="bg-white p-4 rounded-xl shadow text-center mx-auto max-w-xs">
+    <img src="images/ak47_g_slot.png" class="w-24 h-24 mx-auto" alt="Golden Edition AKM">
+    <p class="font-bold text-lg mt-2">Golden AKM</p>
+    <p class="text-sm text-gray-600">시즌 1 랭크 보상으로 지급되는 특별 에디션 AKM</p>
+  </div>
+</div>
+
+<script>
+    function filterGuns(type, btn) {
+      const groups = document.querySelectorAll('.gun-group');
+      groups.forEach(group => {
+        if (type === 'all' || group.dataset.type === type) {
+          group.classList.remove('hidden');
+        } else {
+          group.classList.add('hidden');
+        }
+      });
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-button'));
+      btn.classList.add('active-button');
+    }
+  </script>
+</body>
+</html>
