@@ -310,19 +310,73 @@
   </div>
 </div>
 
-<script>
-    function filterGuns(type, btn) {
-      const groups = document.querySelectorAll('.gun-group');
-      groups.forEach(group => {
-        if (type === 'all' || group.dataset.type === type) {
-          group.classList.remove('hidden');
-        } else {
-          group.classList.add('hidden');
-        }
+<!-- Detail Modal -->
+  <div id="detail-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-2xl shadow-lg max-w-md w-full relative">
+      <button id="modal-close" class="absolute top-2 right-2 text-2xl">&times;</button>
+      <img id="modal-image" src="" alt="" class="w-full h-40 object-cover rounded mb-4" />
+      <h3 id="modal-name" class="text-2xl font-bold mb-2"></h3>
+      <p id="modal-desc" class="mb-2"></p>
+      <p><strong>데미지:</strong> <span id="modal-damage"></span></p>
+      <p><strong>헤드샷:</strong> <span id="modal-headshot"></span></p>
+      <h4 class="font-semibold mt-4 mb-2">패치 내역</h4>
+      <ul id="modal-patches" class="list-disc list-inside text-gray-600"></ul>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Filter
+      window.filterGuns = (type, btn) => {
+        document.querySelectorAll('.gun-group').forEach(g => g.classList.toggle('hidden', !(type==='all'||g.dataset.type===type)));
+        document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active-button'));
+        btn.classList.add('active-button');
+      };
+      // Patch histories per weapon
+      const patchHistories = {
+        'AKM': ['패치내역 없음'],
+        'AK103': ['패치내력 없음'],
+        'M4A1': ['패치내역 없음'],
+		'M16A1': ['패치내역 없음'],
+		'HK416': ['패치내역 없음'],
+		'Mk14': ['패치내역 없음'],
+		'Scar': ['패치내역 없음'],
+		'SKS': ['패치내역 없음'],
+		'M249': ['패치내역 없음'],
+		'QBZ-95': ['패치내역 없음'],
+		'Minigun': ['패치내역 없음'],
+		'AS-Val': ['패치내역 없음'],
+		'P90': ['패치내역 없음'],
+		'UMP-45': ['패치내역 없음'],
+		'Vector': ['패치내역 없음'],
+		'MP5': ['패치내역 없음'],
+		'AA12': ['패치내역 없음'],
+		'M870': ['패치내역 없음'],
+		'AWM': ['패치내역 없음'],
+		'M95': ['패치내역 없음'],
+		'B101': ['패치내역 없음'],
+		'SSG-08': ['패치내역 없음'],
+		'황금총': ['패치내역 없음']
+        // ... 다른 총기별 이력
+      };
+      // Detail modal logic
+      document.querySelectorAll('.gun-group .bg-white').forEach(card => {
+        card.addEventListener('click', () => {
+          const name = card.querySelector('p.font-bold').innerText;
+          const patches = patchHistories[name]||['v1.0'];
+          const ul = document.getElementById('modal-patches'); ul.innerHTML='';
+          patches.forEach(p=>{const li=document.createElement('li');li.innerText=p;ul.appendChild(li);});
+          document.getElementById('modal-image').src=card.querySelector('img').src;
+          document.getElementById('modal-name').innerText=name;
+          document.getElementById('modal-desc').innerText=card.querySelector('p.text-sm').innerText;
+          const stats=card.querySelectorAll('p.text-sm')[1].innerText.split('/').map(s=>s.trim());
+          document.getElementById('modal-damage').innerText=stats[0];
+          document.getElementById('modal-headshot').innerText=stats[1];
+          document.getElementById('detail-modal').classList.remove('hidden');
+        });
       });
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-button'));
-      btn.classList.add('active-button');
-    }
+      document.getElementById('modal-close').addEventListener('click', () => document.getElementById('detail-modal').classList.add('hidden'));
+    });
   </script>
 </body>
 </html>
