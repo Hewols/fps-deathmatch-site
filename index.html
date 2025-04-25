@@ -22,37 +22,22 @@
       <p class="text-lg">플레이어는 사망할 때마다 무작위 총기를 지급받으며, 팀으로 나뉘어 전투를 벌입니다.</p>
       <p class="text-lg">한 팀이 <strong>100킬</strong>을 먼저 달성하면 승리합니다.</p>
     </div>
-    <!-- Map List Section -->
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h2 class="text-2xl font-bold mb-4">🗺️ 맵</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="bg-gray-50 p-4 rounded-lg text-center">
-      <img src="images/haven.png" alt="헤이븐" class="w-full h-32 object-cover mb-2 rounded" />
-      <p class="text-base font-medium">헤이븐</p>
-      <p class="text-sm text-gray-600">발로란트</p>
+    <!-- 맵 캐러셀 영역 -->
+	<div class="bg-white p-6 rounded-2xl shadow">
+  <h2 class="text-3xl font-bold mb-6">🗺️ 맵</h2>
+  <div class="flex items-center justify-center gap-10">
+    <button id="prev-map" class="px-5 py-3 bg-gray-300 rounded hover:bg-gray-400 text-xl">←</button>
+
+    <div id="map-display" class="text-center">
+      <img id="map-image" src="images/haven.png" alt="헤이븐" class="w-96 h-60 object-cover mb-4 rounded-xl shadow" />
+      <p id="map-name" class="text-2xl font-extrabold">헤이븐</p>
+      <p id="map-type" class="text-lg text-gray-600 mt-1">발로란트</p>
     </div>
-    <div class="bg-gray-50 p-4 rounded-lg text-center">
-      <img src="images/split.png" alt="스플릿" class="w-full h-32 object-cover mb-2 rounded" />
-      <p class="text-base font-medium">스플릿</p>
-      <p class="text-sm text-gray-600">발로란트</p>
-    </div>
-    <div class="bg-gray-50 p-4 rounded-lg text-center">
-      <img src="images/glitch.png" alt="글리치" class="w-full h-32 object-cover mb-2 rounded" />
-      <p class="text-base font-medium">글리치</p>
-      <p class="text-sm text-gray-600">발로란트</p>
-    </div>
-    <div class="bg-gray-50 p-4 rounded-lg text-center">
-      <img src="images/dust.png" alt="더스트II" class="w-full h-32 object-cover mb-2 rounded" />
-      <p class="text-base font-medium">더스트II</p>
-      <p class="text-sm text-gray-600">카운터 스트라이크 2</p>
-    </div>
-	<div class="bg-gray-50 p-4 rounded-lg text-center">
-      <img src="images/italy.png" alt="이탈리아" class="w-full h-32 object-cover mb-2 rounded" />
-      <p class="text-base font-medium">이탈리아</p>
-      <p class="text-sm text-gray-600">카운터 스트라이크 2</p>
-    </div>
+
+    <button id="next-map" class="px-5 py-3 bg-gray-300 rounded hover:bg-gray-400 text-xl">→</button>
   </div>
 </div>
+
 
     <div class="flex flex-wrap gap-2 mb-6">
       <button onclick="filterGuns('all', this)" class="filter-btn px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">전체</button>
@@ -415,6 +400,39 @@
 		  document.getElementById('patch-notes-overlay').classList.add('hidden');
 		  document.getElementById('patch-notes-overlay').classList.remove('flex');
 		});
+	  // 맵 데이터
+const maps = [
+  { name: "헤이븐", image: "images/haven.png", type: "발로란트" },
+  { name: "스플릿", image: "images/split.png", type: "발로란트" },
+  { name: "글리치", image: "images/glitch.png", type: "발로란트" },
+  { name: "더스트II", image: "images/dust.png", type: "카운터 스트라이크 2" },
+  { name: "이탈리아", image: "images/italy.png", type: "카운터 스트라이크 2" }
+];
+
+let currentMap = 0;
+
+// 맵 표시 갱신 함수
+function updateMap() {
+  const map = maps[currentMap];
+  document.getElementById('map-image').src = map.image;
+  document.getElementById('map-name').innerText = map.name;
+  document.getElementById('map-type').innerText = map.type;
+}
+
+// 왼쪽 버튼
+document.getElementById('prev-map').addEventListener('click', () => {
+  currentMap = (currentMap - 1 + maps.length) % maps.length;
+  updateMap();
+});
+
+// 오른쪽 버튼
+document.getElementById('next-map').addEventListener('click', () => {
+  currentMap = (currentMap + 1) % maps.length;
+  updateMap();
+});
+
+// 최초 한번 초기화
+updateMap();
 
   </script>
 </body>
