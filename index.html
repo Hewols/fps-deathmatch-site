@@ -13,7 +13,11 @@
 <body class="bg-gray-100 text-gray-900">
   <div class="max-w-6xl mx-auto px-6 py-10 space-y-10">
 
-    <h1 class="text-3xl font-bold">FPS 랜덤 총기 팀 데스매치</h1>
+    <div class="flex justify-between items-center">
+	  <h1 class="text-3xl font-bold">FPS 랜덤 총기 팀 데스매치</h1>
+	  <button id="show-patch-notes" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">패치 노트</button>
+	</div>
+	
     <div class="bg-white p-6 rounded-2xl shadow">
       <p class="text-lg">플레이어는 사망할 때마다 무작위 총기를 지급받으며, 팀으로 나뉘어 전투를 벌입니다.</p>
       <p class="text-lg">한 팀이 <strong>100킬</strong>을 먼저 달성하면 승리합니다.</p>
@@ -323,6 +327,26 @@
       <ul id="modal-patches" class="list-disc list-inside text-gray-600"></ul>
     </div>
   </div>
+  <!-- 패치노트 전체 보기 오버레이 -->
+<div id="patch-notes-overlay" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden items-center justify-center">
+  <div class="bg-white p-6 rounded-2xl shadow-lg max-w-xl w-full relative">
+    <button id="close-patch-notes" class="absolute top-2 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+    <h2 class="text-2xl font-bold mb-4">📜 전체 패치 노트</h2>
+    <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm">
+      <li>총기 밸런스 조절</li>
+	  <li>AKM - 헤드샷 피해량: 150% ➜ 180%</li>
+	  <li>AK103 - 헤드샷 피해량: 260% ➜ 200%</li>
+	  <li>M4A1 - 데미지: 20 ➜ 30, 헤드샷 피해량: 150% ➜ 165%</li>
+	  <li>M16A1 - 데미지: 25 ➜ 28, 헤드샷 피해량: 150% ➜ 180%</li>
+	  <li>SKS - 데미지: 32 ➜ 28, 헤드샷 피해량: 200% ➜ 220%</li>
+	  <li>M249 - 헤드샷 피해량: 150% ➜ 130%</li>
+	  <li>Minigun - 헤드샷 피해량: 200% ➜ 160%</li>
+	  <li>AA12 - 헤드샷 피해량: 133% ➜ 180%</li>
+	  <li>M870 - 헤드샷 피해량: 133% ➜ 180%</li>
+	  <li>AWM - 헤드샷 피해량: 200% ➜ 250%</li>
+    </ul>
+  </div>
+</div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -377,6 +401,16 @@
       });
       document.getElementById('modal-close').addEventListener('click', () => document.getElementById('detail-modal').classList.add('hidden'));
     });
+	// 전체 패치 노트 열기/닫기
+		document.getElementById('show-patch-notes')?.addEventListener('click', () => {
+		  document.getElementById('patch-notes-overlay').classList.remove('hidden');
+		  document.getElementById('patch-notes-overlay').classList.add('flex');
+		});
+		document.getElementById('close-patch-notes')?.addEventListener('click', () => {
+		  document.getElementById('patch-notes-overlay').classList.add('hidden');
+		  document.getElementById('patch-notes-overlay').classList.remove('flex');
+		});
+
   </script>
 </body>
 </html>
