@@ -18,19 +18,9 @@
       <p class="text-lg">플레이어는 사망할 때마다 무작위 총기를 지급받으며, 팀으로 나뉘어 전투를 벌입니다.</p>
       <p class="text-lg">한 팀이 <strong>100킬</strong>을 먼저 달성하면 승리합니다.</p>
     </div>
-
-    <div class="flex flex-wrap gap-2 mb-6">
-      <button onclick="filterGuns('all', this)" class="filter-btn px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">전체</button>
-      <button onclick="filterGuns('ar', this)" class="filter-btn px-4 py-2 bg-red-400 text-white rounded hover:bg-red-500">돌격소총</button>
-      <button onclick="filterGuns('smg', this)" class="filter-btn px-4 py-2 bg-blue-400 text-white rounded hover:bg-blue-500">기관단총</button>
-      <button onclick="filterGuns('shotgun', this)" class="filter-btn px-4 py-2 bg-green-400 text-white rounded hover:bg-green-500">산탄총</button>
-      <button onclick="filterGuns('sniper', this)" class="filter-btn px-4 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500">저격소총</button>
-      <button onclick="filterGuns('special', this)" class="filter-btn px-4 py-2 bg-purple-400 text-white rounded hover:bg-purple-500">특수총</button>
-    </div>
-
     <!-- Map List Section -->
     <div class="bg-white p-6 rounded-2xl shadow">
-      <h2 class="text-2xl font-bold mb-4">맵</h2>
+      <h2 class="text-2xl font-bold mb-4">🗺️ 맵</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-gray-50 p-4 rounded-lg text-center">
           <img src="images/haven.png" alt="헤이븐" class="w-full h-32 object-cover mb-2 rounded" />
@@ -49,6 +39,15 @@
           <p class="text-base font-medium">더스트II</p>
         </div>
       </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-6">
+      <button onclick="filterGuns('all', this)" class="filter-btn px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">전체</button>
+      <button onclick="filterGuns('ar', this)" class="filter-btn px-4 py-2 bg-red-400 text-white rounded hover:bg-red-500">돌격소총</button>
+      <button onclick="filterGuns('smg', this)" class="filter-btn px-4 py-2 bg-blue-400 text-white rounded hover:bg-blue-500">기관단총</button>
+      <button onclick="filterGuns('shotgun', this)" class="filter-btn px-4 py-2 bg-green-400 text-white rounded hover:bg-green-500">산탄총</button>
+      <button onclick="filterGuns('sniper', this)" class="filter-btn px-4 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500">저격소총</button>
+      <button onclick="filterGuns('special', this)" class="filter-btn px-4 py-2 bg-purple-400 text-white rounded hover:bg-purple-500">특수총</button>
     </div>
 
     <div id="guns-list" class="space-y-10">
