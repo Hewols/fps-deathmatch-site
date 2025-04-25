@@ -328,7 +328,7 @@
 
 <!-- Detail Modal -->
   <div id="detail-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white p-6 rounded-2xl shadow-lg max-w-md w-full relative">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg max-w-md w-full relative">
       <button id="modal-close" class="absolute top-2 right-2 text-2xl">&times;</button>
       <img id="modal-image" src="" alt="" class="w-full h-40 object-cover rounded mb-4" />
       <h3 id="modal-name" class="text-2xl font-bold mb-2"></h3>
@@ -336,12 +336,12 @@
       <p><strong>데미지:</strong> <span id="modal-damage"></span></p>
       <p><strong>헤드샷:</strong> <span id="modal-headshot"></span></p>
       <h4 class="font-semibold mt-4 mb-2">패치 내역</h4>
-      <ul id="modal-patches" class="list-disc list-inside text-gray-600"></ul>
+      <ul id="modal-patches" class="list-disc list-inside text-gray-600 dark:text-white"></ul>
     </div>
   </div>
   <!-- 패치노트 전체 보기 오버레이 -->
 <div id="patch-notes-overlay" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden items-center justify-center">
-  <div class="bg-white p-6 rounded-2xl shadow-lg max-w-xl w-full relative">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg max-w-xl w-full relative">
     <button id="close-patch-notes" class="absolute top-2 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
     <h2 class="text-2xl font-bold mb-4">📜 전체 패치 노트</h2>
     <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm">
