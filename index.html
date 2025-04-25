@@ -26,7 +26,11 @@
 	<div class="bg-white p-6 rounded-2xl shadow">
   <h2 class="text-3xl font-bold mb-6">🗺️ 맵</h2>
   <div class="flex items-center justify-center gap-10">
-    <button id="prev-map" class="px-5 py-3 bg-gray-300 rounded hover:bg-gray-400 text-xl">←</button>
+    <button id="prev-map" class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 transition-transform transform hover:scale-110 shadow">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+  </svg>
+</button>
 
     <div id="map-display" class="text-center">
       <img id="map-image" src="images/haven.png" alt="헤이븐" class="w-96 h-60 object-cover mb-4 rounded-xl shadow" />
@@ -34,7 +38,11 @@
       <p id="map-type" class="text-lg text-gray-600 mt-1">발로란트</p>
     </div>
 
-    <button id="next-map" class="px-5 py-3 bg-gray-300 rounded hover:bg-gray-400 text-xl">→</button>
+    <button id="next-map" class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 transition-transform transform hover:scale-110 shadow">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+</button>
   </div>
 </div>
 
