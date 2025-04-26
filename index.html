@@ -553,181 +553,92 @@ function updateModeButton(isDark) {
       };
       // Patch histories per weapon
       const patchHistories = {
-        'AKM': [
-		{
-		 category: '1차 (2024.04.26)',
-		 changes: [
-		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'
-		 ]}],
-        'AK103': [
-		{
-		 category: '1차 (2024.04.26)',
-		 changes: [
-		 '데미지: 40 <span class="text-red-400">➜ 37</span>',
-		 '헤드샷 피해량: 260% <span class="text-red-400">➜ 200%</span>'
-		 ]}],
-        'M4A1': [
-		{
-		 category: '1차 (2024.04.26)',
-		 changes: [
-		 '데미지: 20 <span class="text-blue-400">➜ 30</span>',
-		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'
-		 ]}],
-		'M16A1': [
-		{
-		 category: '1차 (2024.04.26)',
-		 changes: [
-		 '데미지: 25 <span class="text-blue-400">➜ 28</span>',
-		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'
-		 ]}],
-		'HK416': [
-		{
-		 category: '패치내역 없음',
-		 changes: [
-		 '패치내역 없음'
-		 ]}],
-		'Mk14': [
-		{
-		 category: '1차 (2024.04.26)',
-		 changes: [
-		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span>'
-		 ]}],
-		'Scar': [
-		{
-		cartegory: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'SKS': [
-		{
-		 category: '1차 (2024.04.26)',
-		 changes: [
-		 '데미지: 32 <span class="text-blue-400">➜ 38</span>',
-		 '헤드샷 피해량: 200% <span class="text-blue-400">➜ 220%</span>'
-		 ]}],
-		'M249': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'헤드샷 피해량: 150% <span class="text-red-400">➜ 130%</span>'
-		]}],
-		'QBZ-95': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'데미지: 32 <span class="text-blue-400">➜ 36</span>',
-		'헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'
-		]}],
-		'Minigun': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'헤드샷 피해량: 200% <span class="text-red-400">➜ 160%</span>',
-		'2차 - 데미지: 25 <span class="text-red-400">➜ 20</span>'
-		]}],
-		'AS-Val': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'P90': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'데미지: 22 <span class="text-blue-400">➜ 26</span>',
-		'헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'
-		]}],
-		'UMP-45': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'데미지: 22 <span class="text-blue-400">➜ 25</span>',
-		'헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'
-		]}],
-		'Vector': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'데미지: 22 <span class="text-red-400">➜ 20</span>',
-		'헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'
-		]}],
-		'MP5': [
-		{
-		category: '1차 (2024.04.26)',
-        changes: [
-		'데미지: 24 <span class="text-blue-400">➜ 26</span>'
-		]}],
-		'AA12': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>',
-		'2차 - 데미지: 7x10 <span class="text-blue-400">➜ 9x10</span>'
-		]}],
-		'M870': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>',
-		'2차 - 데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'
-		]}],
-		'AWM': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'
-		]}],
-		'M95': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'B101': [
-		{
-		category: '1차 (2024.04.26)',
-		changes: [
-		'데미지: 100 <span class="text-blue-400">➜ 125</span>'
-		]}],
-		'SSG-08': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'황금총': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'드라구노프': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'9A-91': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'SV98': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-		'Evo3': [
-		{
-		category: '패치내역 없음',
-		changes: [
-		'패치내역 없음'
-		]}],
-        // ... 다른 총기별 이력
-      };
+  'AKM': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'] }
+  ],
+  'AK103': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 40 <span class="text-red-400">➜ 37</span>', '헤드샷 피해량: 260% <span class="text-red-400">➜ 200%</span>'] }
+  ],
+  'M4A1': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 20 <span class="text-blue-400">➜ 30</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'] }
+  ],
+  'M16A1': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 25 <span class="text-blue-400">➜ 28</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'] }
+  ],
+  'HK416': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  'Mk14': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span>'] }
+  ],
+  'Scar': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  'SKS': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 32 <span class="text-blue-400">➜ 38</span>', '헤드샷 피해량: 200% <span class="text-blue-400">➜ 220%</span>'] }
+  ],
+  'M249': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-red-400">➜ 130%</span>'] }
+  ],
+  'QBZ-95': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 32 <span class="text-blue-400">➜ 36</span>', '헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'] }
+  ],
+  'Minigun': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-red-400">➜ 160%</span>'] },
+    { category: '2차 (2024.04.26)', changes: ['데미지: 25 <span class="text-red-400">➜ 20</span>'] }
+  ],
+  'AS-Val': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  'P90': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 22 <span class="text-blue-400">➜ 26</span>', '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'] }
+  ],
+  'UMP-45': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 22 <span class="text-blue-400">➜ 25</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'] }
+  ],
+  'Vector': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 22 <span class="text-red-400">➜ 20</span>', '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'] }
+  ],
+  'MP5': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 24 <span class="text-blue-400">➜ 26</span>'] }
+  ],
+  'AA12': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
+    { category: '2차 (2024.04.26)', changes: ['데미지: 7x10 <span class="text-blue-400">➜ 9x10</span>'] }
+  ],
+  'M870': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
+    { category: '2차 (2024.04.26)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'] }
+  ],
+  'AWM': [
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'] }
+  ],
+  'M95': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  'B101': [
+    { category: '1차 (2024.04.26)', changes: ['데미지: 100 <span class="text-blue-400">➜ 125</span>'] }
+  ],
+  'SSG-08': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  '황금총': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  '드라고노프': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  '9A-91': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  'SV98': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ],
+  'Evo3': [
+    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+  ]
+};
+
       // Detail modal logic
       document.querySelectorAll('.gun-group .bg-white').forEach(card => {
         card.addEventListener('click', () => {
