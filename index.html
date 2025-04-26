@@ -399,6 +399,20 @@
   </div>
 </div>
 
+<style>
+  /* 패치노트 스크롤 예쁘게 */
+  #patch-notes-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  #patch-notes-list::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 116, 139, 0.8); /* 회색 느낌 */
+    border-radius: 4px;
+  }
+  #patch-notes-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 	  // 다크모드 토글
@@ -408,7 +422,7 @@
 	'<span class="text-green-400">인페르노 추가</span>',
 	'<span class="text-green-400">미라지 추가</span>'
 	],
-    '드라고노프': [
+    '드라구노프': [
 	'<span class="text-green-400">데미지: 100</span>',
 	'<span class="text-green-400">헤드샷 피해량: 250%</span>'
 	],
