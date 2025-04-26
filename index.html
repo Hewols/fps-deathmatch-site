@@ -161,6 +161,12 @@
             <p class="text-sm text-gray-600 dark:text-white">소음기 일체형 돌격소총</p>
             <p class="text-sm text-gray-600 dark:text-white">데미지: 37 / 헤드샷: 165%</p>
           </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/9a91.png" class="w-24 h-24 mx-auto" alt="9A-91">
+            <p class="font-bold text-lg">9A-91</p>
+            <p class="text-sm text-gray-600 dark:text-white">세계에서 가장 콤팩트한 소총</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 34 / 헤드샷: 150%</p>
+          </div>
         </div>
       </div>
 
@@ -191,6 +197,12 @@
             <p class="font-bold text-lg">MP5</p>
             <p class="text-sm text_gray-600">안정성과 정확도가 높은 기관단총</p>
             <p class="text-sm text-gray-600 dark:text-white">데미지: 26 / 헤드샷: 160%</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/evo3.png" class="w-24 h-24 mx-auto" alt="Evo3">
+            <p class="font-bold text-lg">Evo3</p>
+            <p class="text-sm text_gray-600">가볍고 빠른 반응속도를 가진 기관단총</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 27 / 헤드샷: 140%</p>
           </div>
         </div>
       </div>
@@ -240,6 +252,18 @@
             <img src="images/ssg08.png" class="w-24 h-24 mx-auto" alt="SSG-08">
             <p class="font-bold text-lg">SSG-08</p>
             <p class="text-sm text-gray-600 dark:text-white">경량화된 스나이퍼 라이플</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 100 / 헤드샷: 250%</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/sv98.png" class="w-24 h-24 mx-auto" alt="SV98">
+            <p class="font-bold text-lg">SV98</p>
+            <p class="text-sm text-gray-600 dark:text-white">고정밀 볼트액션 저격소총</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 125 / 헤드샷: 250%</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/svd.png" class="w-24 h-24 mx-auto" alt="드라고노프">
+            <p class="font-bold text-lg">드라고노프</p>
+            <p class="text-sm text-gray-600 dark:text-white">중장거리 반자동 저격</p>
             <p class="text-sm text-gray-600 dark:text-white">데미지: 100 / 헤드샷: 250%</p>
           </div>
         </div>
@@ -342,8 +366,8 @@
       <img id="modal-image" src="" alt="" class="w-full h-40 object-cover rounded mb-4" />
       <h3 id="modal-name" class="text-2xl font-bold mb-2"></h3>
       <p id="modal-desc" class="mb-2"></p>
-      <p><strong>데미지:</strong> <span id="modal-damage"></span></p>
-      <p><strong>헤드샷:</strong> <span id="modal-headshot"></span></p>
+      <p><span id="modal-damage"></span></p>
+      <p><span id="modal-headshot"></span></p>
       <h4 class="font-semibold mt-4 mb-2">패치 내역</h4>
       <ul id="modal-patches" class="list-disc list-inside text-gray-600 dark:text-white"></ul>
     </div>
@@ -355,7 +379,12 @@
     <h2 class="text-2xl font-bold mb-4">📜 전체 패치 노트</h2>
     <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm dark:text-white">
       <li>2025.04.26 2차 패치내역</li>
-	  <li>Minigun - 헤드샷 피해량: 150% <span class="text-red-400">➜ 180%</span></li>
+	  <li><span class="text-green-400">[NEW] 9A-91 - 데미지: 34, 헤드샷 피해량: 150%</span></li>
+	  <li><span class="text-green-400">[NEW] SV98 - 데미지: 125, 헤드샷 피해량: 250%</span></li>
+	  <li><span class="text-green-400">[NEW] 드라고노프 - 데미지: 100, 헤드샷 피해량: 250%</span></li>
+	  <li><span class="text-green-400">[NEW] Evo3 - 데미지: 27, 헤드샷 피해량: 140%</span></li>
+	  <li><span class="text-green-400">[NEW] 전장: 인페르노</span></li>
+	  <li><span class="text-green-400">[NEW] 전장: 미라지</span></li>
 	  <li>QBZ-95 - 데미지: 32 <span class="text-blue-400">➜ 36</span>, 헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span></li>
 	  <li>B101 - 데미지: 100 <span class="text-blue-400">➜ 125</span></li>
 	  <li>P90 - 데미지: 22 <span class="text-blue-400">➜ 26</span>, 헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span></li>
@@ -437,7 +466,11 @@ function updateModeButton(isDark) {
 		'M95': ['패치내역 없음'],
 		'B101': ['1차 - 데미지: 100 <span class="text-blue-400">➜ 125</span>'],
 		'SSG-08': ['패치내역 없음'],
-		'황금총': ['패치내역 없음']
+		'황금총': ['패치내역 없음'],
+		'드라고노프': ['패치내역 없음'],
+		'9A-91': ['패치내역 없음'],
+		'SV98': ['패치내역 없음'],
+		'Evo3': ['패치내역 없음'],
         // ... 다른 총기별 이력
       };
       // Detail modal logic
