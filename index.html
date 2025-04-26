@@ -373,8 +373,8 @@
     </div>
   </div>
   <!-- 패치노트 전체 보기 오버레이 -->
-<div id="patch-notes-overlay" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden items-center justify-center">
-  <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg max-w-xl w-full relative">
+<div id="patch-notes-overlay" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden flex items-center justify-center">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg max-w-xl w-full relative overflow-y-auto max-h-[90vh]">
     <button id="close-patch-notes" class="absolute top-2 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
     <h2 class="text-2xl font-bold mb-4">📜 전체 패치 노트</h2>
     <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm dark:text-white">
@@ -402,7 +402,101 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 	  // 다크모드 토글
+	 const patchNotes = {
+  '2차 (2025.04.26)': {
+    '신규전장': [
+	'<span class="text-green-400">인페르노 추가</span>',
+	'<span class="text-green-400">미라지 추가</span>'
+	],
+    '드라고노프': [
+	'<span class="text-green-400">데미지: 100</span>',
+	'<span class="text-green-400">헤드샷 피해량: 250%</span>'
+	],
+    '9A-91': ['<span class="text-green-400">데미지: 34</span>',
+	'<span class="text-green-400">헤드샷 피해량: 150%</span>'
+	],
+    'SV98': [
+	'<span class="text-green-400">데미지: 125</span>',
+	'<span class="text-green-400">헤드샷 피해량: 250%</span>'
+	],
+    'Evo3': [
+	'<span class="text-green-400">데미지: 27</span>',
+	'<span class="text-green-400">헤드샷 피해량: 140%</span>'
+	],
+    'QBZ-95': [
+      '데미지: 32 <span class="text-blue-400">➜ 36</span>',
+      '헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'
+    ],
+    'Minigun': [
+      '데미지: 25 <span class="text-red-400">➜ 20</span>'
+    ],
+    'P90': [
+      '데미지: 22 <span class="text-blue-400">➜ 26</span>',
+      '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'
+    ],
+    'UMP-45': [
+      '데미지: 22 <span class="text-blue-400">➜ 25</span>',
+      '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'
+    ],
+    'Vector': [
+      '데미지: 22 <span class="text-red-400">➜ 20</span>',
+      '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'
+    ],
+    'MP5': [
+      '데미지: 24 <span class="text-blue-400">➜ 26</span>'
+    ],
+    'AA12': [
+      '헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'
+    ],
+    'M870': [
+      '헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'
+    ],
+    'B101': [
+      '데미지: 100 <span class="text-blue-400">➜ 125</span>'
+    ],
+  }
+};
+
     // 여기 바로 넣는다 👇
+	// 전체 패치 노트 열기/닫기
+		document.getElementById('show-patch-notes')?.addEventListener('click', () => {
+  const overlay = document.getElementById('patch-notes-overlay');
+  overlay.classList.remove('hidden');
+  
+  document.getElementById('close-patch-notes')?.addEventListener('click', () => {
+  const overlay = document.getElementById('patch-notes-overlay');
+  overlay.classList.add('hidden');
+  });
+
+  const contentArea = overlay.querySelector('ul');
+  contentArea.innerHTML = ''; // 일단 다 비우고
+
+  for (const version in patchNotes) {
+    // 1. 버전 표시
+    const versionLi = document.createElement('li');
+    versionLi.innerHTML = `<strong class="text-xl">${version}</strong>`;
+    versionLi.classList.add('mt-4', 'mb-2');
+    contentArea.appendChild(versionLi);
+
+    const guns = patchNotes[version];
+    for (const gun in guns) {
+      // 2. 총기명
+      const gunLi = document.createElement('li');
+      gunLi.innerHTML = `<span class="text-lg text-gray-800 dark:text-white">${gun}</span>`;
+      gunLi.classList.add('ml-6', 'mt-2', 'mb-1');
+      contentArea.appendChild(gunLi);
+
+      guns[gun].forEach(change => {
+        // 3. 총기 변경사항
+        const changeLi = document.createElement('li');
+        changeLi.innerHTML = change;
+        changeLi.classList.add('ml-12', 'list-disc', 'text-gray-800', 'dark:text-white', 'text-sm');
+        contentArea.appendChild(changeLi);
+      });
+    }
+  }
+});
+
 // 1. 페이지 처음 열었을 때
 if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.add('dark');
@@ -445,33 +539,179 @@ function updateModeButton(isDark) {
       };
       // Patch histories per weapon
       const patchHistories = {
-        'AKM': ['1차 - 헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'],
-        'AK103': ['1차 - 데미지: 40 <span class="text-red-400">➜ 37</span>, 헤드샷 피해량: 260% <span class="text-red-400">➜ 200%</span>'],
-        'M4A1': ['1차 - 데미지: 20 <span class="text-blue-400">➜ 30</span>, 헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'],
-		'M16A1': ['1차 - 데미지: 25 <span class="text-blue-400">➜ 28</span>, 헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'],
-		'HK416': ['패치내역 없음'],
-		'Mk14': ['1차 - 헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span>'],
-		'Scar': ['패치내역 없음'],
-		'SKS': ['1차 - 데미지: 32 <span class="text-blue-400">➜ 38</span>, 헤드샷 피해량: 200% <span class="text-blue-400">➜ 220%</span>'],
-		'M249': ['1차 - 헤드샷 피해량: 150% <span class="text-red-400">➜ 130%</span>'],
-		'QBZ-95': ['1차 - 데미지: 32 <span class="text-blue-400">➜ 36</span>, 헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'],
-		'Minigun': ['1차 - 헤드샷 피해량: 200% <span class="text-red-400">➜ 160%</span>', '2차 - 데미지: 25 <span class="text-red-400">➜ 20</span>'],
-		'AS-Val': ['패치내역 없음'],
-		'P90': ['1차 - 데미지: 22 <span class="text-blue-400">➜ 26</span>, 헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'],
-		'UMP-45': ['1차 - 데미지: 22 <span class="text-blue-400">➜ 25</span>, 헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'],
-		'Vector': ['1차 - 데미지: 22 <span class="text-red-400">➜ 20</span>, 헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'],
-		'MP5': ['1차 - 데미지: 24 <span class="text-blue-400">➜ 26</span>'],
-		'AA12': ['1차 - 헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>', '2차 - 데미지: 7x10 <span class="text-blue-400">➜ 9x10</span>'],
-		'M870': ['1차 - 헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>', '2차 - 데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'],
-		'AWM': ['1차 - 헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'],
-		'M95': ['패치내역 없음'],
-		'B101': ['1차 - 데미지: 100 <span class="text-blue-400">➜ 125</span>'],
-		'SSG-08': ['패치내역 없음'],
-		'황금총': ['패치내역 없음'],
-		'드라고노프': ['패치내역 없음'],
-		'9A-91': ['패치내역 없음'],
-		'SV98': ['패치내역 없음'],
-		'Evo3': ['패치내역 없음'],
+        'AKM': [
+		{
+		 category: '1차 (2024.04.26)',
+		 changes: [
+		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'
+		 ]}],
+        'AK103': [
+		{
+		 category: '1차 (2024.04.26)',
+		 changes: [
+		 '데미지: 40 <span class="text-red-400">➜ 37</span>',
+		 '헤드샷 피해량: 260% <span class="text-red-400">➜ 200%</span>'
+		 ]}],
+        'M4A1': [
+		{
+		 category: '1차 (2024.04.26)',
+		 changes: [
+		 '데미지: 20 <span class="text-blue-400">➜ 30</span>',
+		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'
+		 ]}],
+		'M16A1': [
+		{
+		 category: '1차 (2024.04.26)',
+		 changes: [
+		 '데미지: 25 <span class="text-blue-400">➜ 28</span>',
+		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'
+		 ]}],
+		'HK416': [
+		{
+		 category: '패치내역 없음',
+		 changes: [
+		 '패치내역 없음'
+		 ]}],
+		'Mk14': [
+		{
+		 category: '1차 (2024.04.26)',
+		 changes: [
+		 '헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span>'
+		 ]}],
+		'Scar': [
+		{
+		cartegory: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'SKS': [
+		{
+		 category: '1차 (2024.04.26)',
+		 changes: [
+		 '데미지: 32 <span class="text-blue-400">➜ 38</span>',
+		 '헤드샷 피해량: 200% <span class="text-blue-400">➜ 220%</span>'
+		 ]}],
+		'M249': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'헤드샷 피해량: 150% <span class="text-red-400">➜ 130%</span>'
+		]}],
+		'QBZ-95': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'데미지: 32 <span class="text-blue-400">➜ 36</span>',
+		'헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'
+		]}],
+		'Minigun': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'헤드샷 피해량: 200% <span class="text-red-400">➜ 160%</span>',
+		'2차 - 데미지: 25 <span class="text-red-400">➜ 20</span>'
+		]}],
+		'AS-Val': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'P90': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'데미지: 22 <span class="text-blue-400">➜ 26</span>',
+		'헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'
+		]}],
+		'UMP-45': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'데미지: 22 <span class="text-blue-400">➜ 25</span>',
+		'헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'
+		]}],
+		'Vector': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'데미지: 22 <span class="text-red-400">➜ 20</span>',
+		'헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'
+		]}],
+		'MP5': [
+		{
+		category: '1차 (2024.04.26)',
+        changes: [
+		'데미지: 24 <span class="text-blue-400">➜ 26</span>'
+		]}],
+		'AA12': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>',
+		'2차 - 데미지: 7x10 <span class="text-blue-400">➜ 9x10</span>'
+		]}],
+		'M870': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>',
+		'2차 - 데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'
+		]}],
+		'AWM': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'
+		]}],
+		'M95': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'B101': [
+		{
+		category: '1차 (2024.04.26)',
+		changes: [
+		'데미지: 100 <span class="text-blue-400">➜ 125</span>'
+		]}],
+		'SSG-08': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'황금총': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'드라고노프': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'9A-91': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'SV98': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
+		'Evo3': [
+		{
+		category: '패치내역 없음',
+		changes: [
+		'패치내역 없음'
+		]}],
         // ... 다른 총기별 이력
       };
       // Detail modal logic
@@ -480,7 +720,23 @@ function updateModeButton(isDark) {
           const name = card.querySelector('p.font-bold').innerText;
           const patches = patchHistories[name]||['v1.0'];
           const ul = document.getElementById('modal-patches'); ul.innerHTML='';
-          patches.forEach(p=>{const li=document.createElement('li');li.innerHTML = p;ul.appendChild(li);});
+          patches.forEach(patch => {
+		  const categoryLi = document.createElement('li');
+		  categoryLi.innerText = patch.category;
+		  
+		  const changesUl = document.createElement('ul');
+		  changesUl.classList.add('pl-6', 'list-disc', 'list-inside', 'text-sm');
+		  
+		  patch.changes.forEach(change => {
+			const changeLi = document.createElement('li');
+			changeLi.innerHTML = change;
+			changesUl.appendChild(changeLi);
+		  });
+		  
+		  categoryLi.appendChild(changesUl);
+		  ul.appendChild(categoryLi);
+		});
+
           document.getElementById('modal-image').src=card.querySelector('img').src;
           document.getElementById('modal-name').innerText=name;
           document.getElementById('modal-desc').innerText=card.querySelector('p.text-sm').innerText;
@@ -492,15 +748,6 @@ function updateModeButton(isDark) {
       });
       document.getElementById('modal-close').addEventListener('click', () => document.getElementById('detail-modal').classList.add('hidden'));
     });
-	// 전체 패치 노트 열기/닫기
-		document.getElementById('show-patch-notes')?.addEventListener('click', () => {
-		  document.getElementById('patch-notes-overlay').classList.remove('hidden');
-		  document.getElementById('patch-notes-overlay').classList.add('flex');
-		});
-		document.getElementById('close-patch-notes')?.addEventListener('click', () => {
-		  document.getElementById('patch-notes-overlay').classList.add('hidden');
-		  document.getElementById('patch-notes-overlay').classList.remove('flex');
-		});
 	  // 맵 데이터
 const maps = [
   { name: "헤이븐", image: "images/haven.png", type: "발로란트" },
