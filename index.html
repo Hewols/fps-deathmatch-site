@@ -10,7 +10,17 @@
     darkMode: 'class', // 다크모드 'class' 기반
   }
 </script>
-
+<style>
+  .page-btn {
+    background-color: #6B7280; /* 기본 회색 */
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .page-btn.active {
+    background-color: #6366F1; /* 활성화된 버튼은 파란색 */
+    color: white;
+  }
+</style>
   <style>
     .hidden { display: none; }
     .active-button { background-color: #4B5563 !important; color: white !important; }
@@ -31,11 +41,16 @@
         </button>
       </div>
     </div>
+	<div class="flex gap-2 mb-6">
+  <button id="main-btn" class="page-btn px-4 py-2 rounded">메인</button>
+  <button id="training-btn" class="page-btn px-4 py-2 rounded">훈련장</button>
+</div>
 	
     <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
       <p class="text-lg">플레이어는 사망할 때마다 무작위 총기를 지급받으며, 팀으로 나뉘어 전투를 벌입니다.</p>
       <p class="text-lg">한 팀이 <strong>100킬</strong>을 먼저 달성하면 승리합니다.</p>
     </div>
+	<div id="main-section">
     <!-- 맵 캐러셀 -->
     <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
       <h2 class="text-3xl font-bold mb-6">🗺️ 전장</h2>
@@ -373,31 +388,53 @@
     </div>
   </div>
   <!-- 패치노트 전체 보기 오버레이 -->
+</div>
+<!-- 훈련장 섹션 (training-section) -->
+<div id="training-section" class="hidden space-y-10">
+  <h2 class="text-3xl font-bold mb-6">🎯 훈련장</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- 사격 모드 카드 -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center training-card" data-title="사격 연습" data-desc="고정된 타겟을 맞춰 정확도를 높이는 훈련 모드입니다." data-image="images/training.png">
+      <img src="images/training.png" alt="사격 연습" class="mx-auto mb-6 w-full max-w-xl h-auto object-contain">
+      <h3 class="text-xl font-bold mb-2">사격 연습</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">고정된 타겟을 맞춰 정확도를 높이는 훈련 모드입니다.</p>
+    </div>
+
+    <!-- 총 선택 카드 -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow text-center training-card" data-title="총 선택" data-desc="원하는 총기를 선택해 자유롭게 사격 연습을 진행할 수 있습니다." data-image="images/weapon_choose.png">
+      <img src="images/weapon_choose.png" alt="총 선택" class="mx-auto mb-6 w-full max-w-xl h-auto object-contain">
+      <h3 class="text-xl font-bold mb-2">총 선택</h3>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">원하는 총기를 선택해 자유롭게 사격 연습을 진행할 수 있습니다.</p>
+    </div>
+  </div>
+  
+</div>
+
+<!-- 훈련장 상세 모달 -->
+<div id="training-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-lg max-w-3xl w-full relative">
+    <button id="training-modal-close" class="absolute top-4 right-6 text-4xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">&times;</button>
+    <img id="training-modal-image" src="" alt="" class="w-full max-h-[600px] object-contain rounded-2xl mb-8">
+    <h3 id="training-modal-title" class="text-4xl font-bold text-center mb-4"></h3>
+    <p id="training-modal-desc" class="text-gray-700 dark:text-gray-300 text-lg text-center"></p>
+  </div>
+  
+</div>
 <div id="patch-notes-overlay" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden flex items-center justify-center">
   <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg max-w-xl w-full relative overflow-y-auto max-h-[90vh]">
     <button id="close-patch-notes" class="absolute top-2 right-4 text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
     <h2 class="text-2xl font-bold mb-4">📜 전체 패치 노트</h2>
     <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm dark:text-white">
-      <li>2025.04.26 2차 패치내역</li>
-	  <li><span class="text-green-400">[NEW] 9A-91 - 데미지: 34, 헤드샷 피해량: 150%</span></li>
-	  <li><span class="text-green-400">[NEW] SV98 - 데미지: 125, 헤드샷 피해량: 250%</span></li>
-	  <li><span class="text-green-400">[NEW] 드라구노프 - 데미지: 100, 헤드샷 피해량: 250%</span></li>
-	  <li><span class="text-green-400">[NEW] Evo3 - 데미지: 27, 헤드샷 피해량: 140%</span></li>
-	  <li><span class="text-green-400">[NEW] 전장: 인페르노</span></li>
-	  <li><span class="text-green-400">[NEW] 전장: 미라지</span></li>
-	  <li>Minigun - 데미지: 25 <span class="text-red-400">➜ 20</span></li>
-	  <li>QBZ-95 - 데미지: 32 <span class="text-blue-400">➜ 36</span>, 헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span></li>
-	  <li>B101 - 데미지: 100 <span class="text-blue-400">➜ 125</span></li>
-	  <li>P90 - 데미지: 22 <span class="text-blue-400">➜ 26</span>, 헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span></li>
-	  <li>Vector - 데미지: 22 <span class="text-red-400">➜ 20</span>, 헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span></li>
-	  <li>UMP - 데미지: 22 <span class="text-blue-400">➜ 25</span>, 헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span></li>
-	  <li>MP5 - 데미지: 24 <span class="text-blue-400">➜ 26</span></li>
-	  <li>AA12 - 데미지: 7x10 <span class="text-blue-400">➜ 9x10</span></li>
-	  <li>M870 - 데미지: 10x10 <span class="text-blue-400">➜ 12x10</span></li>
-	  <li>Mk14 - 헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span></li>
     </ul>
+	</div>
   </div>
 </div>
+
+
+
+
 
 <style>
   /* 패치노트 스크롤 예쁘게 */
@@ -413,9 +450,8 @@
   }
 </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-	  // 다크모드 토글
+<script>
+ // 다크모드 토글
 	 const patchNotes = {
   '3차 (2025.04.27)': {
     '플레이어 스탯': [
@@ -424,20 +460,21 @@
 	],
   }
 };
-
-    // 여기 바로 넣는다 👇
 	// 전체 패치 노트 열기/닫기
-		document.getElementById('show-patch-notes')?.addEventListener('click', () => {
+document.getElementById('show-patch-notes')?.addEventListener('click', () => {
   const overlay = document.getElementById('patch-notes-overlay');
   overlay.classList.remove('hidden');
+  overlay.classList.add('flex'); // 이거 추가해야 flex로 오버레이 펼쳐짐
   
-  document.getElementById('close-patch-notes')?.addEventListener('click', () => {
+  // 닫기 버튼도 수정
+document.getElementById('close-patch-notes')?.addEventListener('click', () => {
   const overlay = document.getElementById('patch-notes-overlay');
   overlay.classList.add('hidden');
-  });
+  overlay.classList.remove('flex'); // flex도 제거해줘야 깨끗해
+});
 
   const contentArea = overlay.querySelector('ul');
-  contentArea.innerHTML = ''; // 일단 다 비우고
+  contentArea.innerHTML = ''; // 기존 내용 다 지우고
 
   for (const version in patchNotes) {
     // 1. 버전 표시
@@ -464,6 +501,12 @@
     }
   }
 });
+</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // 여기 바로 넣는다 👇
 
 // 1. 페이지 처음 열었을 때
 if (localStorage.getItem('theme') === 'dark') {
@@ -664,5 +707,73 @@ document.getElementById('next-map').addEventListener('click', () => {
 updateMap();
 
   </script>
+<script>
+// 훈련장 카드 클릭 -> 모달 열기
+document.querySelectorAll('.training-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const title = card.getAttribute('data-title');
+    const desc = card.getAttribute('data-desc');
+    const image = card.getAttribute('data-image');
+
+    document.getElementById('training-modal-title').innerText = title;
+    document.getElementById('training-modal-desc').innerText = desc;
+    document.getElementById('training-modal-image').src = image;
+
+    document.getElementById('training-modal').classList.remove('hidden');
+    document.getElementById('training-modal').classList.add('flex');
+  });
+});
+
+// 훈련장 모달 닫기
+document.getElementById('training-modal-close').addEventListener('click', () => {
+  document.getElementById('training-modal').classList.add('hidden');
+  document.getElementById('training-modal').classList.remove('flex');
+});
+
+// 메인/훈련장 버튼 제어
+document.addEventListener('DOMContentLoaded', () => {
+  const mainBtn = document.getElementById('main-btn');
+  const trainingBtn = document.getElementById('training-btn');
+  const mainSection = document.getElementById('main-section');
+  const trainingSection = document.getElementById('training-section');
+
+  function activateButton(activeBtn) {
+    document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
+    activeBtn.classList.add('active');
+  }
+
+  mainBtn.addEventListener('click', () => {
+    mainSection.classList.remove('hidden');
+    trainingSection.classList.add('hidden');
+    activateButton(mainBtn);
+  });
+
+  trainingBtn.addEventListener('click', () => {
+    mainSection.classList.add('hidden');
+    trainingSection.classList.remove('hidden');
+    activateButton(trainingBtn);
+  });
+
+  // 기본으로 메인 버튼 활성화
+  activateButton(mainBtn);
+});
+
+
+// ✅ 패치노트 열기/닫기 항상 가능하게 고정
+const patchButton = document.getElementById('show-patch-notes');
+const patchOverlay = document.getElementById('patch-notes-overlay');
+const patchClose = document.getElementById('close-patch-notes');
+
+patchButton.addEventListener('click', () => {
+  patchOverlay.classList.remove('hidden');
+  patchOverlay.classList.add('flex');
+});
+
+patchClose.addEventListener('click', () => {
+  patchOverlay.classList.add('hidden');
+  patchOverlay.classList.remove('flex');
+});
+</script>
+
 </body>
 </html>
