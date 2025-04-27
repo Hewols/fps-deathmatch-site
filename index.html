@@ -249,37 +249,37 @@
             <img src="images/ai_awp.png" class="w-24 h-24 mx-auto" alt="AWM">
             <p class="font-bold text-lg">AWM</p>
             <p class="text-sm text-gray-600 dark:text-white">높은 데미지와 정확도를 가진 저격소총</p>
-            <p class="text-sm text-gray-600 dark:text-white">데미지: 100 / 헤드샷: 250%</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 150 / 헤드샷: 250%</p>
           </div>
           <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
             <img src="images/m95.png" class="w-24 h-24 mx-auto" alt="M95">
             <p class="font-bold text-lg">M95</p>
             <p class="text-sm text-gray-600 dark:text-white">전신을 관통하는 대물 저격소총</p>
-            <p class="text-sm text-gray-600 dark:text-white">데미지: 100 / 헤드샷: 250%</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 150 / 헤드샷: 250%</p>
           </div>
           <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
             <img src="images/b101.png" class="w-24 h-24 mx-auto" alt="B101">
             <p class="font-bold text-lg">B101</p>
             <p class="text-sm text-gray-600 dark:text-white">고속 탄환을 사용하는 활</p>
-            <p class="text-sm text-gray-600 dark:text-white">데미지: 125 / 헤드샷: 250%</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 175 / 헤드샷: 250%</p>
           </div>
           <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
             <img src="images/ssg08.png" class="w-24 h-24 mx-auto" alt="SSG-08">
             <p class="font-bold text-lg">SSG-08</p>
             <p class="text-sm text-gray-600 dark:text-white">경량화된 스나이퍼 라이플</p>
-            <p class="text-sm text-gray-600 dark:text-white">데미지: 100 / 헤드샷: 250%</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 150 / 헤드샷: 250%</p>
           </div>
 		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
             <img src="images/sv98.png" class="w-24 h-24 mx-auto" alt="SV98">
             <p class="font-bold text-lg">SV98</p>
             <p class="text-sm text-gray-600 dark:text-white">고정밀 볼트액션 저격소총</p>
-            <p class="text-sm text-gray-600 dark:text-white">데미지: 125 / 헤드샷: 250%</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 175 / 헤드샷: 250%</p>
           </div>
 		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
             <img src="images/svd.png" class="w-24 h-24 mx-auto" alt="드라구노프">
             <p class="font-bold text-lg">드라구노프</p>
             <p class="text-sm text-gray-600 dark:text-white">중장거리 반자동 저격</p>
-            <p class="text-sm text-gray-600 dark:text-white">데미지: 100 / 헤드샷: 250%</p>
+            <p class="text-sm text-gray-600 dark:text-white">데미지: 150 / 헤드샷: 250%</p>
           </div>
         </div>
       </div>
@@ -463,6 +463,24 @@
 	'설명: /훈련장 을 사용하여 훈련장/스폰 이동 가능합니다.',
 	'설명2: /총선택 을 사용하여 연습할 총기를 선택할 수 있습니다.'
 	],
+	'AWM': [
+	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
+	],
+	'M95': [
+	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
+	],
+	'B101': [
+	'데미지: 125 <span class="text-blue-400">➜ 175</span>'
+	],
+	'SSG-08': [
+	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
+	],
+	'SV98': [
+	'데미지: 125 <span class="text-blue-400">➜ 175</span>'
+	],
+	'드라구노프': [
+	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
+	],
   }
 };
 	// 전체 패치 노트 열기/닫기
@@ -613,28 +631,30 @@ function updateModeButton(isDark) {
     { category: '2차 (2024.04.26)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'] }
   ],
   'AWM': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'] }
+    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'] },
+	{ category: '2차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   'M95': [
-    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+    { category: '1차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   'B101': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 100 <span class="text-blue-400">➜ 125</span>'] }
+    { category: '1차 (2024.04.26)', changes: ['데미지: 100 <span class="text-blue-400">➜ 125</span>'] },
+	{ category: '2차 (2024.04.27)', changes: ['데미지: 125 <span class="text-blue-400">➜ 175</span>'] }
   ],
   'SSG-08': [
-    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+    { category: '1차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   '황금총': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
   ],
   '드라구노프': [
-    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+    { category: '1차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   '9A-91': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
   ],
   'SV98': [
-    { category: '패치내역 없음', changes: ['패치내역 없음'] }
+    { category: '1차 (2024.04.27)', changes: ['데미지: 125 <span class="text-blue-400">➜ 175</span>'] }
   ],
   'Evo3': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
