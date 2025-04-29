@@ -55,7 +55,9 @@
 	<div class="flex gap-2 mb-6">
   <button id="main-btn" class="page-btn px-4 py-2 rounded">메인</button>
   <button id="training-btn" class="page-btn px-4 py-2 rounded">훈련장</button>
+  <button id="rank-btn" class="page-btn px-4 py-2 rounded">랭크 대시보드</button> <!-- 추가 -->
 </div>
+
 	
     <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
       <p class="text-lg">플레이어는 사망할 때마다 무작위 총기를 지급받으며, 팀으로 나뉘어 전투를 벌입니다.</p>
@@ -443,6 +445,248 @@
 	</div>
   </div>
 
+<div id="rank-section" class="hidden space-y-10">
+  <h2 class="text-3xl font-bold mb-6 text-center">🏆 랭크 대시보드</h2>
+  
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow mx-auto max-w-2xl">
+    <div class="flex flex-col space-y-4">
+      
+      <!-- 예시 랭크 데이터 -->
+      <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">1</span> <!-- 순위 -->
+        <img src="images/silver.png" class="w-12 h-12" alt="실버"> <!-- 티어 -->
+        <span class="font-bold text-lg flex-1">sogu_1</span> <!-- 닉네임 -->
+        <span class="text-lg font-bold text-blue-400">9,900 RP</span> <!-- RP -->
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">2</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">himynema</span>
+        <span class="text-lg font-bold text-blue-400">9,840 RP</span>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">3</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">_Lonely__</span>
+        <span class="text-lg font-bold text-blue-400">9,720 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">4</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">Snow_whisper</span>
+        <span class="text-lg font-bold text-blue-400">8,300 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">5</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">goldsiki</span>
+        <span class="text-lg font-bold text-blue-400">7,500 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">6</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">Ghost0315</span>
+        <span class="text-lg font-bold text-blue-400">7,160 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">7</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">Arise_11</span>
+        <span class="text-lg font-bold text-blue-400">6,890 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">8</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">Demul_123</span>
+        <span class="text-lg font-bold text-blue-400">5,810 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">9</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">sandbbox</span>
+        <span class="text-lg font-bold text-blue-400">5,725 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">10</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">m4eng9</span>
+        <span class="text-lg font-bold text-blue-400">5,430 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">11</span>
+        <img src="images/silver.png" class="w-12 h-12" alt="실버">
+        <span class="font-bold text-lg flex-1">jigabgab</span>
+        <span class="text-lg font-bold text-blue-400">5,155 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">12</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">Norang_2ne</span>
+        <span class="text-lg font-bold text-blue-400">4,840 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">13</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">autumn_35</span>
+        <span class="text-lg font-bold text-blue-400">4,780 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">14</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">HANEUL_e2</span>
+        <span class="text-lg font-bold text-blue-400">3,380 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">15</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">kim_chunsic</span>
+        <span class="text-lg font-bold text-blue-400">2,790 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">16</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">amdi777</span>
+        <span class="text-lg font-bold text-blue-400">2,720 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">17</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">kimgeonuwoo0227</span>
+        <span class="text-lg font-bold text-blue-400">2,500 RP</span>
+      </div>
+	 
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">18</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">a_happy_troll</span>
+        <span class="text-lg font-bold text-blue-400">2,385 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">19</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">Heohan_</span>
+        <span class="text-lg font-bold text-blue-400">2,360 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">20</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">_Ggule</span>
+        <span class="text-lg font-bold text-blue-400">2,195 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">21</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">kd2p</span>
+        <span class="text-lg font-bold text-blue-400">1,530 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">22</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">apple132</span>
+        <span class="text-lg font-bold text-blue-400">1,330 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">23</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">wkaEmf</span>
+        <span class="text-lg font-bold text-blue-400">990 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">24</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">HUM_K</span>
+        <span class="text-lg font-bold text-blue-400">850 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">25</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">Lee_Juhan</span>
+        <span class="text-lg font-bold text-blue-400">650 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">26</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">dravenslayer</span>
+        <span class="text-lg font-bold text-blue-400">610 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">27</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">anglishdix</span>
+        <span class="text-lg font-bold text-blue-400">435 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">28</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">n2ght_</span>
+        <span class="text-lg font-bold text-blue-400">420 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">29</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">MegaByte_1106</span>
+        <span class="text-lg font-bold text-blue-400">390 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">30</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">karl0227_</span>
+        <span class="text-lg font-bold text-blue-400">250 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">31</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">hong8340</span>
+        <span class="text-lg font-bold text-blue-400">150 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">32</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">poi0904</span>
+        <span class="text-lg font-bold text-blue-400">140 RP</span>
+      </div>
+	  
+	  <div class="flex items-center space-x-6">
+        <span class="text-2xl font-bold w-8 text-center">33</span>
+        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
+        <span class="font-bold text-lg flex-1">qwert212243</span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
+      </div>
+      <!-- 여기에 추가 데이터 계속 이어붙이면 돼 -->
+      
+    </div>
+  </div>
+</div>
 
 
 
@@ -767,8 +1011,10 @@ document.getElementById('training-modal-close').addEventListener('click', () => 
 document.addEventListener('DOMContentLoaded', () => {
   const mainBtn = document.getElementById('main-btn');
   const trainingBtn = document.getElementById('training-btn');
+  const rankBtn = document.getElementById('rank-btn'); // 추가
   const mainSection = document.getElementById('main-section');
   const trainingSection = document.getElementById('training-section');
+  const rankSection = document.getElementById('rank-section'); // 추가
 
   function activateButton(activeBtn) {
     document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
@@ -778,18 +1024,28 @@ document.addEventListener('DOMContentLoaded', () => {
   mainBtn.addEventListener('click', () => {
     mainSection.classList.remove('hidden');
     trainingSection.classList.add('hidden');
+    rankSection.classList.add('hidden');
     activateButton(mainBtn);
   });
 
   trainingBtn.addEventListener('click', () => {
     mainSection.classList.add('hidden');
     trainingSection.classList.remove('hidden');
+    rankSection.classList.add('hidden');
     activateButton(trainingBtn);
+  });
+
+  rankBtn.addEventListener('click', () => {
+    mainSection.classList.add('hidden');
+    trainingSection.classList.add('hidden');
+    rankSection.classList.remove('hidden');
+    activateButton(rankBtn);
   });
 
   // 기본으로 메인 버튼 활성화
   activateButton(mainBtn);
 });
+
 
 
 // ✅ 패치노트 열기/닫기 항상 가능하게 고정
