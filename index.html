@@ -450,6 +450,12 @@
   
   <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow mx-auto max-w-2xl">
     <div class="flex flex-col space-y-4">
+	<div class="flex justify-end mb-2">
+  <div id="season-countdown" class="text-base font-semibold text-gray-600 dark:text-gray-300">
+    <!-- JS에서 내용 삽입 -->
+  </div>
+</div>
+
       
       <!-- 예시 랭크 데이터 -->
       <div class="flex items-center space-x-6">
@@ -1239,6 +1245,28 @@ patchClose.addEventListener('click', () => {
   patchOverlay.classList.remove('flex');
 });
 </script>
+<script>
+  function updateSeasonCountdown() {
+    const endDate = new Date("2025-05-14"); // 시즌 종료일
+    const today = new Date();
+    const diff = endDate.setHours(0,0,0,0) - today.setHours(0,0,0,0); // 날짜만 비교
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+    let text = "";
+    if (days > 0) {
+      text = `시즌 1 종료일까지 D-${days} 남음`;
+    } else if (days === 0) {
+      text = `시즌 1 오늘 종료됩니다!`;
+    } else {
+      text = `시즌 1이 종료되었습니다.`;
+    }
+
+    document.getElementById("season-countdown").innerText = text;
+  }
+
+  updateSeasonCountdown();
+</script>
+
 
 </body>
 </html>
