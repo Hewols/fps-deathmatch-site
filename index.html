@@ -896,30 +896,15 @@
 <script>
  // 다크모드 토글
 	 const patchNotes = {
-  '3차 (2025.04.27)': {
-    '플레이어 스탯': [
-	'체력: 100 <span class="text-blue-400">➜ 150</span>',
-	'이동속도: 0.2 <span class="text-blue-400">➜ 0.23</span>'
+  '4차 (2025.05.03)': {
+    '신규 전장': [
+	'<span class="text-green-400">부산 사찰</span>'
 	],
-	'훈련장': [
-	'명령어: /훈련장, /총선택 추가',
-	'설명: /훈련장 을 사용하여 훈련장/스폰 이동 가능합니다.',
-	'설명2: /총선택 을 사용하여 연습할 총기를 선택할 수 있습니다.'
+	'M870': [
+	'데미지: 12x10 <span class="text-blue-400">➜ 17x10</span>'
 	],
-	'AWM': [
-	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
-	],
-	'M95': [
-	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
-	],
-	'B101': [
-	'데미지: 125 <span class="text-blue-400">➜ 175</span>'
-	],
-	'SSG-08': [
-	'데미지: 100 <span class="text-blue-400">➜ 150</span>'
-	],
-	'SV98': [
-	'데미지: 125 <span class="text-blue-400">➜ 175</span>'
+	'AA12': [
+	'데미지: 9x10 <span class="text-blue-400">➜ 14x10</span>'
 	],
   }
 };
@@ -1014,75 +999,77 @@ function updateModeButton(isDark) {
       // Patch histories per weapon
       const patchHistories = {
   'AKM': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'] }
   ],
   'AK103': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 40 <span class="text-red-400">➜ 37</span>', '헤드샷 피해량: 260% <span class="text-red-400">➜ 200%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 40 <span class="text-red-400">➜ 37</span>', '헤드샷 피해량: 260% <span class="text-red-400">➜ 200%</span>'] }
   ],
   'M4A1': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 20 <span class="text-blue-400">➜ 30</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 20 <span class="text-blue-400">➜ 30</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'] }
   ],
   'M16A1': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 25 <span class="text-blue-400">➜ 28</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 25 <span class="text-blue-400">➜ 28</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 180%</span>'] }
   ],
   'HK416': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
   ],
   'Mk14': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-blue-400">➜ 170%</span>'] }
   ],
   'Scar': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
   ],
   'SKS': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 32 <span class="text-blue-400">➜ 38</span>', '헤드샷 피해량: 200% <span class="text-blue-400">➜ 220%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 32 <span class="text-blue-400">➜ 38</span>', '헤드샷 피해량: 200% <span class="text-blue-400">➜ 220%</span>'] }
   ],
   'M249': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-red-400">➜ 130%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 150% <span class="text-red-400">➜ 130%</span>'] }
   ],
   'QBZ-95': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 32 <span class="text-blue-400">➜ 36</span>', '헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 32 <span class="text-blue-400">➜ 36</span>', '헤드샷 피해량: 160% <span class="text-blue-400">➜ 180%</span>'] }
   ],
   'Minigun': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-red-400">➜ 160%</span>'] },
-    { category: '2차 (2024.04.26)', changes: ['데미지: 25 <span class="text-red-400">➜ 20</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-red-400">➜ 160%</span>'] },
+    { category: '2차 (2025.04.26)', changes: ['데미지: 25 <span class="text-red-400">➜ 20</span>'] }
   ],
   'AS-Val': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
   ],
   'P90': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 22 <span class="text-blue-400">➜ 26</span>', '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 22 <span class="text-blue-400">➜ 26</span>', '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'] }
   ],
   'UMP-45': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 22 <span class="text-blue-400">➜ 25</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 22 <span class="text-blue-400">➜ 25</span>', '헤드샷 피해량: 150% <span class="text-blue-400">➜ 165%</span>'] }
   ],
   'Vector': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 22 <span class="text-red-400">➜ 20</span>', '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 22 <span class="text-red-400">➜ 20</span>', '헤드샷 피해량: 125% <span class="text-blue-400">➜ 140%</span>'] }
   ],
   'MP5': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 24 <span class="text-blue-400">➜ 26</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 24 <span class="text-blue-400">➜ 26</span>'] }
   ],
   'AA12': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
-    { category: '2차 (2024.04.26)', changes: ['데미지: 7x10 <span class="text-blue-400">➜ 9x10</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
+    { category: '2차 (2025.04.26)', changes: ['데미지: 7x10 <span class="text-blue-400">➜ 9x10</span>'] },
+	{ category: '3차 (2025.05.03)', changes: ['데미지: 9x10 <span class="text-blue-400">➜ 14x10</span>'] }
   ],
   'M870': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
-    { category: '2차 (2024.04.26)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
+    { category: '2차 (2025.04.26)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'] },
+	{ category: '3차 (2025.05.03)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 17x10</span>'] }
   ],
   'AWM': [
-    { category: '1차 (2024.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'] },
-	{ category: '2차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'] },
+	{ category: '2차 (2025.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   'M95': [
-    { category: '1차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
+    { category: '1차 (2025.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   'B101': [
-    { category: '1차 (2024.04.26)', changes: ['데미지: 100 <span class="text-blue-400">➜ 125</span>'] },
-	{ category: '2차 (2024.04.27)', changes: ['데미지: 125 <span class="text-blue-400">➜ 175</span>'] }
+    { category: '1차 (2025.04.26)', changes: ['데미지: 100 <span class="text-blue-400">➜ 125</span>'] },
+	{ category: '2차 (2025.04.27)', changes: ['데미지: 125 <span class="text-blue-400">➜ 175</span>'] }
   ],
   'SSG-08': [
-    { category: '1차 (2024.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
+    { category: '1차 (2025.04.27)', changes: ['데미지: 100 <span class="text-blue-400">➜ 150</span>'] }
   ],
   '황금총': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
@@ -1094,7 +1081,7 @@ function updateModeButton(isDark) {
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
   ],
   'SV98': [
-    { category: '1차 (2024.04.27)', changes: ['데미지: 125 <span class="text-blue-400">➜ 175</span>'] }
+    { category: '1차 (2025.04.27)', changes: ['데미지: 125 <span class="text-blue-400">➜ 175</span>'] }
   ],
   'Evo3': [
     { category: '패치내역 없음', changes: ['패치내역 없음'] }
@@ -1143,7 +1130,8 @@ const maps = [
   { name: "더스트II", image: "images/dust.png", type: "카운터 스트라이크 2" },
   { name: "이탈리아", image: "images/italy.png", type: "카운터 스트라이크 2" },
   { name: "인페르노", image: "images/inferno.png", type: "카운터 스트라이크 2" },
-  { name: "미라지", image: "images/mirage.png", type: "카운터 스트라이크 2" }
+  { name: "미라지", image: "images/mirage.png", type: "카운터 스트라이크 2" },
+  { name: "부산 사찰", image: "images/busan.png", type: "오버워치" }
 ];
 
 let currentMap = 0;
