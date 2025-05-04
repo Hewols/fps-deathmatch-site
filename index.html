@@ -55,8 +55,10 @@
 	<div class="flex gap-2 mb-6">
   <button id="main-btn" class="page-btn px-4 py-2 rounded">메인</button>
   <button id="training-btn" class="page-btn px-4 py-2 rounded">훈련장</button>
-  <button id="rank-btn" class="page-btn px-4 py-2 rounded">랭크 대시보드</button> <!-- 추가 -->
+  <button id="rank-btn" class="page-btn px-4 py-2 rounded">랭크 대시보드</button>
+  <button id="rank2-btn" class="page-btn px-4 py-2 rounded">시즌2 랭크</button>
 </div>
+
 
 	
     <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
@@ -882,6 +884,80 @@
   </div>
 </div>
 
+<div id="rank-season2" class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+  <div class="flex items-center gap-2">
+    <h2 class="text-2xl font-bold">🏆 시즌2 랭크 정보</h2>
+    <span class="text-sm text-gray-600 dark:text-white">
+      (킬 시 70RP 지급, 데스 시 20RP 차감, 마지막 킬 시 100RP 지급)
+    </span>
+  </div>
+	
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/bronze2.png" class="w-20 h-20 mx-auto" alt="브론즈">
+      <p class="font-bold text-base mt-2">브론즈</p>
+      <p class="text-xs text-gray-600 dark:text-white">0 ~ 4,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/silver2.png" class="w-20 h-20 mx-auto" alt="실버">
+      <p class="font-bold text-base mt-2">실버</p>
+      <p class="text-xs text-gray-600 dark:text-white">5,000 ~ 9,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/gold2.png" class="w-20 h-20 mx-auto" alt="골드">
+      <p class="font-bold text-base mt-2">골드</p>
+      <p class="text-xs text-gray-600 dark:text-white">10,000 ~ 14,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/platinum2.png" class="w-20 h-20 mx-auto" alt="플래티넘">
+      <p class="font-bold text-base mt-2">플래티넘</p>
+      <p class="text-xs text-gray-600 dark:text-white">15,000 ~ 19,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/diamond2.png" class="w-20 h-20 mx-auto" alt="다이아몬드">
+      <p class="font-bold text-base mt-2">다이아몬드</p>
+      <p class="text-xs text-gray-600 dark:text-white">20,000 ~ 24,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/master2.png" class="w-20 h-20 mx-auto" alt="마스터">
+      <p class="font-bold text-base mt-2">마스터</p>
+      <p class="text-xs text-gray-600 dark:text-white">25,000 ~ 29,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/grandmaster2.png" class="w-20 h-20 mx-auto" alt="그랜드 마스터">
+      <p class="font-bold text-base mt-2">그랜드 마스터</p>
+      <p class="text-xs text-gray-600 dark:text-white">30,000 ~ 34,999 RP</p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
+      <img src="images/challenger2.png" class="w-20 h-20 mx-auto" alt="챌린저">
+      <p class="font-bold text-base mt-2">챌린저</p>
+      <p class="text-xs text-gray-600 dark:text-white">35,000+ RP</p>
+    </div>
+	</div>
+  </div>
+
+<!-- 시즌 1 보상 -->
+<div class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+  <div class="flex items-center gap-2">
+  <h2 class="text-2xl font-bold">🎁 시즌 2 보상</h2>
+  <span class="text-sm text-gray-600 dark:text-white">
+      (골드 티어 이상 획득 가능)
+    </span>
+  </div>
+  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center mx-auto max-w-xs">
+    <img src="images/m4a1_g_slot.png" class="w-24 h-24 mx-auto" alt="Golden Edition M4A1">
+    <p class="font-bold text-lg mt-2">Golden M4A1</p>
+    <p class="text-sm text-gray-600 dark:text-white">시즌 2 랭크 보상으로 지급되는 특별 에디션 M4A1</p>
+  </div>
+</div>
+</div>
 
 
 
@@ -1194,9 +1270,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainBtn = document.getElementById('main-btn');
   const trainingBtn = document.getElementById('training-btn');
   const rankBtn = document.getElementById('rank-btn'); // 추가
+  const rank2Btn = document.getElementById('rank2-btn');
   const mainSection = document.getElementById('main-section');
   const trainingSection = document.getElementById('training-section');
   const rankSection = document.getElementById('rank-section'); // 추가
+  const rankseason2 = document.getElementById('rank-season2');
 
   function activateButton(activeBtn) {
     document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
@@ -1207,6 +1285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mainSection.classList.remove('hidden');
     trainingSection.classList.add('hidden');
     rankSection.classList.add('hidden');
+	rankseason2.classList.add('hidden');
     activateButton(mainBtn);
   });
 
@@ -1214,6 +1293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mainSection.classList.add('hidden');
     trainingSection.classList.remove('hidden');
     rankSection.classList.add('hidden');
+	rankseason2.classList.add('hidden');
     activateButton(trainingBtn);
   });
 
@@ -1221,7 +1301,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mainSection.classList.add('hidden');
     trainingSection.classList.add('hidden');
     rankSection.classList.remove('hidden');
+	rankseason2.classList.add('hidden');
     activateButton(rankBtn);
+  });
+  
+  rank2Btn.addEventListener('click', () => {
+    mainSection.classList.add('hidden');
+    trainingSection.classList.add('hidden');
+    rankSection.classList.add('hidden');
+	rankseason2.classList.remove('hidden');
+    activateButton(rank2Btn);
   });
 
   // 기본으로 메인 버튼 활성화
