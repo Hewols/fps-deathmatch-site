@@ -949,7 +949,7 @@
   </div>
 </div>
 
-<div id="rank-season2" class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+<div id="rank-season2" class="hidden max-w-6xl mx-auto px-6 py-10 space-y-10">
   <div class="flex items-center gap-2">
     <h2 class="text-2xl font-bold">🏆 시즌2 랭크 정보</h2>
     <span class="text-sm text-gray-600 dark:text-white">
@@ -1021,6 +1021,67 @@
     <p class="text-sm text-gray-600 dark:text-white">시즌 2 랭크 보상으로 지급되는 특별 에디션 M4A1</p>
   </div>
 </div>
+
+<div id="guns-list2" class="space-y-10">
+
+      <!-- 돌격소총 -->
+      <div class="gun-group" data-type="ar">
+        <h3 class="text-xl font-semibold">🔫 돌격소총 스킨</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 기존 돌격소총 카드들 -->
+          <!-- AKM -->
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/AK-47_Asiimov.png" class="w-24 h-24 mx-auto" alt="AKM">
+            <p class="font-bold text-lg">AKM Asiimov</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/AK-47_Vulcan.png" class="w-24 h-24 mx-auto" alt="AKM">
+            <p class="font-bold text-lg">AKM Vulcan</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/AK-47_Elite_Build.png" class="w-24 h-24 mx-auto" alt="AKM">
+            <p class="font-bold text-lg">AKM Elite</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+		  
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/M4nitro.png" class="w-24 h-24 mx-auto" alt="M4A1">
+            <p class="font-bold text-lg">M4A1 Nitro</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/M4A1-S-knight-market.png" class="w-24 h-24 mx-auto" alt="M4A1">
+            <p class="font-bold text-lg">M4A1 knight</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 저격소총 -->
+      <div class="gun-group" data-type="sniper">
+        <h3 class="text-xl font-semibold">🎯 저격소총 스킨</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/Awp_Fade.png" class="w-24 h-24 mx-auto" alt="AWM">
+            <p class="font-bold text-lg">AWM Fade</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+		  <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center">
+            <img src="images/AWp-dragon-lore-market.png" class="w-24 h-24 mx-auto" alt="AWM">
+            <p class="font-bold text-lg">AWM Dragon</p>
+            <p class="text-sm text-gray-600 dark:text-white">특정 조건 달성 시 획득 가능한 스킨</p>
+            <p class="text-sm text-gray-600 dark:text-white">조건: ???</p>
+          </div>
+        </div>
+      </div>
 </div>
 
 
@@ -1201,7 +1262,7 @@ function updateModeButton(isDark) {
   'M870': [
     { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 133% <span class="text-blue-400">➜ 180%</span>'] },
     { category: '2차 (2025.04.26)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 12x10</span>'] },
-	{ category: '3차 (2025.05.03)', changes: ['데미지: 10x10 <span class="text-blue-400">➜ 17x10</span>'] }
+	{ category: '3차 (2025.05.03)', changes: ['데미지: 12x10 <span class="text-blue-400">➜ 17x10</span>'] }
   ],
   'AWM': [
     { category: '1차 (2025.04.26)', changes: ['헤드샷 피해량: 200% <span class="text-blue-400">➜ 250%</span>'] },
