@@ -56,7 +56,6 @@
   <button id="main-btn" class="page-btn px-4 py-2 rounded">메인</button>
   <button id="training-btn" class="page-btn px-4 py-2 rounded">훈련장</button>
   <button id="rank-btn" class="page-btn px-4 py-2 rounded">랭크 대시보드</button>
-  <button id="rank2-btn" class="page-btn px-4 py-2 rounded">시즌2 랭크</button>
 </div>
 
 
@@ -317,57 +316,57 @@
     <!-- 랭크 시스템 -->
 <div class="space-y-10 mt-16">
   <div class="flex items-center gap-2">
-    <h2 class="text-2xl font-bold">🏆 랭크 시스템</h2>
+    <h2 class="text-2xl font-bold">🏆 시즌2 랭크 정보</h2>
     <span class="text-sm text-gray-600 dark:text-white">
-      (킬 시 100RP 지급, 데스 시 30RP 차감, 마지막 킬 시 120RP 지급)
+      (킬 시 30+(누적킬 당 +1)RP 지급, 데스 시 15RP 차감, 마지막 킬 시 70RP 지급, 승리 시 팀 전체 +50RP 지급, 패배 시 팀 전체 -20RP 차감)
     </span>
   </div>
 	
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/bronze.png" class="w-20 h-20 mx-auto" alt="브론즈">
+      <img src="images/bronze2.png" class="w-20 h-20 mx-auto" alt="브론즈">
       <p class="font-bold text-base mt-2">브론즈</p>
       <p class="text-xs text-gray-600 dark:text-white">0 ~ 4,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/silver.png" class="w-20 h-20 mx-auto" alt="실버">
+      <img src="images/silver2.png" class="w-20 h-20 mx-auto" alt="실버">
       <p class="font-bold text-base mt-2">실버</p>
       <p class="text-xs text-gray-600 dark:text-white">5,000 ~ 9,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/gold.png" class="w-20 h-20 mx-auto" alt="골드">
+      <img src="images/gold2.png" class="w-20 h-20 mx-auto" alt="골드">
       <p class="font-bold text-base mt-2">골드</p>
       <p class="text-xs text-gray-600 dark:text-white">10,000 ~ 14,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/platinum.png" class="w-20 h-20 mx-auto" alt="플래티넘">
+      <img src="images/platinum2.png" class="w-20 h-20 mx-auto" alt="플래티넘">
       <p class="font-bold text-base mt-2">플래티넘</p>
       <p class="text-xs text-gray-600 dark:text-white">15,000 ~ 19,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/diamond.png" class="w-20 h-20 mx-auto" alt="다이아몬드">
+      <img src="images/diamond2.png" class="w-20 h-20 mx-auto" alt="다이아몬드">
       <p class="font-bold text-base mt-2">다이아몬드</p>
       <p class="text-xs text-gray-600 dark:text-white">20,000 ~ 24,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/master.png" class="w-20 h-20 mx-auto" alt="마스터">
+      <img src="images/master2.png" class="w-20 h-20 mx-auto" alt="마스터">
       <p class="font-bold text-base mt-2">마스터</p>
       <p class="text-xs text-gray-600 dark:text-white">25,000 ~ 29,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/grandmaster.png" class="w-20 h-20 mx-auto" alt="그랜드 마스터">
+      <img src="images/grandmaster2.png" class="w-20 h-20 mx-auto" alt="그랜드 마스터">
       <p class="font-bold text-base mt-2">그랜드 마스터</p>
       <p class="text-xs text-gray-600 dark:text-white">30,000 ~ 34,999 RP</p>
     </div>
 
     <div class="bg-white dark:bg-gray-800 p-3 rounded-xl shadow text-center">
-      <img src="images/challenger.png" class="w-20 h-20 mx-auto" alt="챌린저">
+      <img src="images/challenger2.png" class="w-20 h-20 mx-auto" alt="챌린저">
       <p class="font-bold text-base mt-2">챌린저</p>
       <p class="text-xs text-gray-600 dark:text-white">35,000+ RP</p>
     </div>
@@ -377,15 +376,15 @@
 <!-- 시즌 1 보상 -->
 <div class="space-y-10 mt-16">
   <div class="flex items-center gap-2">
-  <h2 class="text-2xl font-bold">🎁 시즌 1 보상</h2>
+  <h2 class="text-2xl font-bold">🎁 시즌 2 보상</h2>
   <span class="text-sm text-gray-600 dark:text-white">
       (골드 티어 이상 획득 가능)
     </span>
   </div>
   <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow text-center mx-auto max-w-xs">
-    <img src="images/ak47_g_slot.png" class="w-24 h-24 mx-auto" alt="Golden Edition AKM">
-    <p class="font-bold text-lg mt-2">Golden AKM</p>
-    <p class="text-sm text-gray-600 dark:text-white">시즌 1 랭크 보상으로 지급되는 특별 에디션 AKM</p>
+    <img src="images/m4a1_g_slot.png" class="w-24 h-24 mx-auto" alt="Golden Edition M4A1">
+    <p class="font-bold text-lg mt-2">Golden M4A1</p>
+    <p class="text-sm text-gray-600 dark:text-white">시즌 2 랭크 보상으로 지급되는 특별 에디션 M4A1</p>
   </div>
 </div>
 
@@ -462,663 +461,87 @@
       <!-- 예시 랭크 데이터 -->
       <div class="flex items-center space-x-6">
 	    <span class="text-2xl font-bold w-8 text-center">1</span>
-	    <img src="images/challenger.png" class="w-12 h-12" alt="챌린저">
-	    <img src="https://mc-heads.net/avatar/sogu_1/32" class="w-10 h-10 rounded-full" alt="sogu_1">
+	    <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+	    <img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
 	    <img src="images/gold-crown.png" class="w-8 h-8" alt="Gold Crown"> <!-- 1등 금색 왕관 -->
-	    <span class="font-bold text-lg flex-1">sogu_1</span>
-	    <span class="text-lg font-bold text-blue-400">76,690 RP</span>
+	    <span class="font-bold text-lg flex-1"></span>
+	    <span class="text-lg font-bold text-blue-400">0 RP</span>
 	  </div>
 
 	<div class="flex items-center space-x-6">
 	  <span class="text-2xl font-bold w-8 text-center">2</span>
-	  <img src="images/challenger.png" class="w-12 h-12" alt="챌린저">
-	  <img src="https://mc-heads.net/avatar/himynema/32" class="w-10 h-10 rounded-full" alt="himynema">
+	  <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+	  <img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
 	  <img src="images/silver-crown.png" class="w-8 h-8" alt="Silver Crown"> <!-- 2등 은색 왕관 -->
-	  <span class="font-bold text-lg flex-1">himynema</span>
-	  <span class="text-lg font-bold text-blue-400">57,300 RP</span>
+	  <span class="font-bold text-lg flex-1"></span>
+	  <span class="text-lg font-bold text-blue-400">0 RP</span>
 	</div>
 
 	<div class="flex items-center space-x-6">
 	  <span class="text-2xl font-bold w-8 text-center">3</span>
-	  <img src="images/challenger.png" class="w-12 h-12" alt="챌린저">
-	  <img src="https://mc-heads.net/avatar/MIROBLUE/32" class="w-10 h-10 rounded-full" alt="MIROBLUE">
+	  <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+	  <img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
 	  <img src="images/bronze-crown.png" class="w-8 h-8" alt="Bronze Crown"> <!-- 3등 동색 왕관 -->
-	  <span class="font-bold text-lg flex-1">MIROBLUE</span>
-	  <span class="text-lg font-bold text-blue-400">42,850 RP</span>
+	  <span class="font-bold text-lg flex-1"></span>
+	  <span class="text-lg font-bold text-blue-400">0 RP</span>
 	</div>
 	
 	<div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">4</span>
-        <img src="images/challenger.png" class="w-12 h-12" alt="챌린저">
-		<img src="https://mc-heads.net/avatar/POPO_juya_j8/32" class="w-10 h-10 rounded-full" alt="POPO_juya_j8">
-        <span class="font-bold text-lg flex-1">POPO_juya_j8</span>
-        <span class="text-lg font-bold text-blue-400">36,630 RP</span>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
       </div>
 	  
 	  <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">5</span>
-        <img src="images/grandmaster.png" class="w-12 h-12" alt="그랜드 마스터">
-		<img src="https://mc-heads.net/avatar/Demul_123/32" class="w-10 h-10 rounded-full" alt="Demul_123">
-        <span class="font-bold text-lg flex-1">Demul_123</span>
-        <span class="text-lg font-bold text-blue-400">33,090 RP</span>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
       </div>
 	  
 	  <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">6</span>
-        <img src="images/grandmaster.png" class="w-12 h-12" alt="그랜드 마스터">
-		<img src="https://mc-heads.net/avatar/Ackerm3n/32" class="w-10 h-10 rounded-full" alt="Ackerm3n">
-        <span class="font-bold text-lg flex-1">Ackerm3n</span>
-        <span class="text-lg font-bold text-blue-400">30,190 RP</span>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
       </div>
 	  
 	  <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">7</span>
-        <img src="images/master.png" class="w-12 h-12" alt="마스터">
-		<img src="https://mc-heads.net/avatar/anglishdix/32" class="w-10 h-10 rounded-full" alt="anglishdix">
-        <span class="font-bold text-lg flex-1">anglishdix</span>
-        <span class="text-lg font-bold text-blue-400">28,015 RP</span>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
       </div>
 	  
 	  <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">8</span>
-        <img src="images/master.png" class="w-12 h-12" alt="마스터">
-		<img src="https://mc-heads.net/avatar/jigabgab/32" class="w-10 h-10 rounded-full" alt="jigabgab">
-        <span class="font-bold text-lg flex-1">jigabgab</span>
-        <span class="text-lg font-bold text-blue-400">25,165 RP</span>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
       </div>
 	  
 	  <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">9</span>
-        <img src="images/diamond.png" class="w-12 h-12" alt="다이아몬드">
-		<img src="https://mc-heads.net/avatar/Frryo1202_/32" class="w-10 h-10 rounded-full" alt="Frryo1202_">
-        <span class="font-bold text-lg flex-1">Frryo1202_</span>
-        <span class="text-lg font-bold text-blue-400">24,670 RP</span>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
       </div>
 	  
 	  <div class="flex items-center space-x-6">
         <span class="text-2xl font-bold w-8 text-center">10</span>
-        <img src="images/diamond.png" class="w-12 h-12" alt="다이아몬드">
-		<img src="https://mc-heads.net/avatar/goldsiki/32" class="w-10 h-10 rounded-full" alt="goldsiki">
-        <span class="font-bold text-lg flex-1">goldsiki</span>
-        <span class="text-lg font-bold text-blue-400">23,350 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">11</span>
-        <img src="images/diamond.png" class="w-12 h-12" alt="다이아몬드">
-		<img src="https://mc-heads.net/avatar/a_happy_troll/32" class="w-10 h-10 rounded-full" alt="a_happy_troll">
-        <span class="font-bold text-lg flex-1">a_happy_troll</span>
-        <span class="text-lg font-bold text-blue-400">21,765 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">12</span>
-        <img src="images/diamond.png" class="w-12 h-12" alt="다이아몬드">
-		<img src="https://mc-heads.net/avatar/ENXWER/32" class="w-10 h-10 rounded-full" alt="ENXWER">
-        <span class="font-bold text-lg flex-1">ENXWER</span>
-        <span class="text-lg font-bold text-blue-400">20,850 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">13</span>
-        <img src="images/platinum.png" class="w-12 h-12" alt="플래티넘">
-		<img src="https://mc-heads.net/avatar/chapssal_siru/32" class="w-10 h-10 rounded-full" alt="chapssal_siru">
-        <span class="font-bold text-lg flex-1">chapssal_siru</span>
-        <span class="text-lg font-bold text-blue-400">17,370 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">14</span>
-        <img src="images/platinum.png" class="w-12 h-12" alt="플래티넘">
-		<img src="https://mc-heads.net/avatar/Yongho1324/32" class="w-10 h-10 rounded-full" alt="Yongho1324">
-        <span class="font-bold text-lg flex-1">Yongho1324</span>
-        <span class="text-lg font-bold text-blue-400">16,870 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">15</span>
-        <img src="images/platinum.png" class="w-12 h-12" alt="플래티넘">
-		<img src="https://mc-heads.net/avatar/apple132/32" class="w-10 h-10 rounded-full" alt="apple132">
-        <span class="font-bold text-lg flex-1">apple132</span>
-        <span class="text-lg font-bold text-blue-400">16,760 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">16</span>
-        <img src="images/platinum.png" class="w-12 h-12" alt="플래티넘">
-		<img src="https://mc-heads.net/avatar/mirestar/32" class="w-10 h-10 rounded-full" alt="mirestar">
-        <span class="font-bold text-lg flex-1">mirestar</span>
-        <span class="text-lg font-bold text-blue-400">16,450 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">17</span>
-        <img src="images/platinum.png" class="w-12 h-12" alt="플래티넘">
-		<img src="https://mc-heads.net/avatar/m4eng9/32" class="w-10 h-10 rounded-full" alt="m4eng9">
-        <span class="font-bold text-lg flex-1">m4eng9</span>
-        <span class="text-lg font-bold text-blue-400">15,940 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">18</span>
-        <img src="images/platinum.png" class="w-12 h-12" alt="플래티넘">
-		<img src="https://mc-heads.net/avatar/CYS1224/32" class="w-10 h-10 rounded-full" alt="CYS1224">
-        <span class="font-bold text-lg flex-1">CYS1224</span>
-        <span class="text-lg font-bold text-blue-400">15,320 RP</span>
-      </div>
-	  
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">19</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/CLEANKETCHUP113/32" class="w-10 h-10 rounded-full" alt="CLEANKETCHUP113">
-        <span class="font-bold text-lg flex-1">CLEANKETCHUP113</span>
-        <span class="text-lg font-bold text-blue-400">14,270 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">20</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/autumn_35/32" class="w-10 h-10 rounded-full" alt="autumn_35">
-        <span class="font-bold text-lg flex-1">autumn_35</span>
-        <span class="text-lg font-bold text-blue-400">14,160 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">21</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/CH_PARK_/32" class="w-10 h-10 rounded-full" alt="CH_PARK_">
-        <span class="font-bold text-lg flex-1">CH_PARK_</span>
-        <span class="text-lg font-bold text-blue-400">14,110 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">22</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/WOOSUNGJUNG/32" class="w-10 h-10 rounded-full" alt="WOOSUNGJUNG">
-        <span class="font-bold text-lg flex-1">WOOSUNGJUNG</span>
-        <span class="text-lg font-bold text-blue-400">14,050 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">23</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/GGOGUMA_/32" class="w-10 h-10 rounded-full" alt="GGOGUMA_">
-        <span class="font-bold text-lg flex-1">GGOGUMA_</span>
-        <span class="text-lg font-bold text-blue-400">13,600 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">24</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/kim_chunsic/32" class="w-10 h-10 rounded-full" alt="kim_chunsic">
-        <span class="font-bold text-lg flex-1">kim_chunsic</span>
-        <span class="text-lg font-bold text-blue-400">13,330 RP</span>
-      </div>
-	 
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">25</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/Lyunon/32" class="w-10 h-10 rounded-full" alt="Lyunon">
-        <span class="font-bold text-lg flex-1">Lyunon</span>
-        <span class="text-lg font-bold text-blue-400">11,750 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">26</span>
-        <img src="images/gold.png" class="w-12 h-12" alt="골드">
-		<img src="https://mc-heads.net/avatar/wns3/32" class="w-10 h-10 rounded-full" alt="wns3">
-        <span class="font-bold text-lg flex-1">wns3</span>
-        <span class="text-lg font-bold text-blue-400">11,240 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">27</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Norang_2ne/32" class="w-10 h-10 rounded-full" alt="Norang_2ne">
-        <span class="font-bold text-lg flex-1">Norang_2ne</span>
-        <span class="text-lg font-bold text-blue-400">9,760 RP</span>
-      </div>
-	  
-	  	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">28</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Dambi__08/32" class="w-10 h-10 rounded-full" alt="Dambi__08">
-        <span class="font-bold text-lg flex-1">Dambi__08</span>
-        <span class="text-lg font-bold text-blue-400">9,500 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">29</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/erits2/32" class="w-10 h-10 rounded-full" alt="erits2">
-        <span class="font-bold text-lg flex-1">erits2</span>
-        <span class="text-lg font-bold text-blue-400">8,920 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">30</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Chick_cho1020/32" class="w-10 h-10 rounded-full" alt="Chick_cho1020">
-        <span class="font-bold text-lg flex-1">Chick_cho1020</span>
-        <span class="text-lg font-bold text-blue-400">8,800 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">31</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/hido_0902/32" class="w-10 h-10 rounded-full" alt="hido_0902">
-        <span class="font-bold text-lg flex-1">hido_0902</span>
-        <span class="text-lg font-bold text-blue-400">8,390 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">32</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Snow_whisper/32" class="w-10 h-10 rounded-full" alt="Snow_whisper">
-        <span class="font-bold text-lg flex-1">Snow_whisper</span>
-        <span class="text-lg font-bold text-blue-400">8,300 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">33</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Ghost0315/32" class="w-10 h-10 rounded-full" alt="Ghost0315">
-        <span class="font-bold text-lg flex-1">Ghost0315</span>
-        <span class="text-lg font-bold text-blue-400">7,160 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">34</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/blackbears0630/32" class="w-10 h-10 rounded-full" alt="blackbears0630">
-        <span class="font-bold text-lg flex-1">blackbears0630</span>
-        <span class="text-lg font-bold text-blue-400">6,960 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">35</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Arise_11/32" class="w-10 h-10 rounded-full" alt="Arise_11">
-        <span class="font-bold text-lg flex-1">Arise_11</span>
-        <span class="text-lg font-bold text-blue-400">6,890 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">36</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/T1_APPLE_GOD/32" class="w-10 h-10 rounded-full" alt="T1_APPLE_GOD">
-        <span class="font-bold text-lg flex-1">T1_APPLE_GOD</span>
-        <span class="text-lg font-bold text-blue-400">6,870 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">37</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/kimseowoo0902/32" class="w-10 h-10 rounded-full" alt="kimseowoo0902">
-        <span class="font-bold text-lg flex-1">kimseowoo0902</span>
-        <span class="text-lg font-bold text-blue-400">6,730 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">38</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Graind_/32" class="w-10 h-10 rounded-full" alt="Graind_">
-        <span class="font-bold text-lg flex-1">Graind_</span>
-        <span class="text-lg font-bold text-blue-400">6,600 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">39</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/asyt4545/32" class="w-10 h-10 rounded-full" alt="asyt4545">
-        <span class="font-bold text-lg flex-1">asyt4545</span>
-        <span class="text-lg font-bold text-blue-400">6,370 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">40</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/sandbbox/32" class="w-10 h-10 rounded-full" alt="sandbbox">
-        <span class="font-bold text-lg flex-1">sandbbox</span>
-        <span class="text-lg font-bold text-blue-400">5,720 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">41</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Slon_c/32" class="w-10 h-10 rounded-full" alt="Slon_c">
-        <span class="font-bold text-lg flex-1">Slon_c</span>
-        <span class="text-lg font-bold text-blue-400">5,570 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">42</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/Hwa_O/32" class="w-10 h-10 rounded-full" alt="Hwa_O">
-        <span class="font-bold text-lg flex-1">Hwa_O</span>
-        <span class="text-lg font-bold text-blue-400">5,350 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">43</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/agechuegung/32" class="w-10 h-10 rounded-full" alt="agechuegung">
-        <span class="font-bold text-lg flex-1">agechuegung</span>
-        <span class="text-lg font-bold text-blue-400">5,170 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">44</span>
-        <img src="images/silver.png" class="w-12 h-12" alt="실버">
-		<img src="https://mc-heads.net/avatar/gamza828/32" class="w-10 h-10 rounded-full" alt="gamza828">
-        <span class="font-bold text-lg flex-1">gamza828</span>
-        <span class="text-lg font-bold text-blue-400">5,070 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">45</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/youmyrt/32" class="w-10 h-10 rounded-full" alt="youmyrt">
-        <span class="font-bold text-lg flex-1">youmyrt</span>
-        <span class="text-lg font-bold text-blue-400">4,600 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">46</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/HANEUL_e2/32" class="w-10 h-10 rounded-full" alt="HANEUL_e2">
-        <span class="font-bold text-lg flex-1">HANEUL_e2</span>
-        <span class="text-lg font-bold text-blue-400">4,520 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">47</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/X_Dang/32" class="w-10 h-10 rounded-full" alt="X_Dang">
-        <span class="font-bold text-lg flex-1">X_Dang</span>
-        <span class="text-lg font-bold text-blue-400">4,480 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">48</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/Lee_Juhan/32" class="w-10 h-10 rounded-full" alt="Lee_Juhan">
-        <span class="font-bold text-lg flex-1">Lee_Juhan</span>
-        <span class="text-lg font-bold text-blue-400">3,630 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">49</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/ahfhw/32" class="w-10 h-10 rounded-full" alt="ahfhw">
-        <span class="font-bold text-lg flex-1">ahfhw</span>
-        <span class="text-lg font-bold text-blue-400">3,530 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">50</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/TuftedTarsier7/32" class="w-10 h-10 rounded-full" alt="TuftedTarsier7">
-        <span class="font-bold text-lg flex-1">TuftedTarsier7</span>
-        <span class="text-lg font-bold text-blue-400">3,240 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">51</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/mori_Baek/32" class="w-10 h-10 rounded-full" alt="mori_Baek">
-        <span class="font-bold text-lg flex-1">mori_Baek</span>
-        <span class="text-lg font-bold text-blue-400">2,920 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">52</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/megax_0927/32" class="w-10 h-10 rounded-full" alt="megax_0927">
-        <span class="font-bold text-lg flex-1">megax_0927</span>
-        <span class="text-lg font-bold text-blue-400">2,830 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">53</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/amdi777/32" class="w-10 h-10 rounded-full" alt="amdi777">
-        <span class="font-bold text-lg flex-1">amdi777</span>
-        <span class="text-lg font-bold text-blue-400">2,720 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">54</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/SnowyNight1017/32" class="w-10 h-10 rounded-full" alt="SnowyNight1017">
-        <span class="font-bold text-lg flex-1">SnowyNight1017</span>
-        <span class="text-lg font-bold text-blue-400">2,690 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">55</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/mes_seu/32" class="w-10 h-10 rounded-full" alt="mes_seu">
-        <span class="font-bold text-lg flex-1">mes_seu</span>
-        <span class="text-lg font-bold text-blue-400">2,620 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">56</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/zxc37z/32" class="w-10 h-10 rounded-full" alt="zxc37z">
-        <span class="font-bold text-lg flex-1">zxc37z</span>
-        <span class="text-lg font-bold text-blue-400">2,530 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">57</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/ND_SCOO/32" class="w-10 h-10 rounded-full" alt="ND_SCOO">
-        <span class="font-bold text-lg flex-1">ND_SCOO</span>
-        <span class="text-lg font-bold text-blue-400">2,520 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">58</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/kangmin0910/32" class="w-10 h-10 rounded-full" alt="kangmin0910">
-        <span class="font-bold text-lg flex-1">kangmin0910</span>
-        <span class="text-lg font-bold text-blue-400">2,420 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">59</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/ANFro99_/32" class="w-10 h-10 rounded-full" alt="ANFro99_">
-        <span class="font-bold text-lg flex-1">ANFro99_</span>
-        <span class="text-lg font-bold text-blue-400">2,360 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">60</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/yumetsu_/32" class="w-10 h-10 rounded-full" alt="yumetsu_">
-        <span class="font-bold text-lg flex-1">yumetsu_</span>
-        <span class="text-lg font-bold text-blue-400">2,350 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">61</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/MegaByte_1106/32" class="w-10 h-10 rounded-full" alt="MegaByte_1106">
-        <span class="font-bold text-lg flex-1">MegaByte_1106</span>
-        <span class="text-lg font-bold text-blue-400">2,270 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">62</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/_Ggule/32" class="w-10 h-10 rounded-full" alt="_Ggule">
-        <span class="font-bold text-lg flex-1">_Ggule</span>
-        <span class="text-lg font-bold text-blue-400">2,195 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">63</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/_soobagi_/32" class="w-10 h-10 rounded-full" alt="_soobagi_">
-        <span class="font-bold text-lg flex-1">_soobagi_</span>
-        <span class="text-lg font-bold text-blue-400">2,120 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">64</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/YesSirCaptain/32" class="w-10 h-10 rounded-full" alt="YesSirCaptain">
-        <span class="font-bold text-lg flex-1">YesSirCaptain</span>
-        <span class="text-lg font-bold text-blue-400">2,090 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">65</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/wkaEmf/32" class="w-10 h-10 rounded-full" alt="wkaEmf">
-        <span class="font-bold text-lg flex-1">wkaEmf</span>
-        <span class="text-lg font-bold text-blue-400">1,860 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">66</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/wonmop/32" class="w-10 h-10 rounded-full" alt="wonmop">
-        <span class="font-bold text-lg flex-1">wonmop</span>
-        <span class="text-lg font-bold text-blue-400">1,740 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">67</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/kd2p/32" class="w-10 h-10 rounded-full" alt="kd2p">
-        <span class="font-bold text-lg flex-1">kd2p</span>
-        <span class="text-lg font-bold text-blue-400">1,530 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">68</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/karl0227_/32" class="w-10 h-10 rounded-full" alt="karl0227_">
-        <span class="font-bold text-lg flex-1">karl0227_</span>
-        <span class="text-lg font-bold text-blue-400">1,520 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">69</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/son0917/32" class="w-10 h-10 rounded-full" alt="son0917">
-        <span class="font-bold text-lg flex-1">son0917</span>
-        <span class="text-lg font-bold text-blue-400">1,250 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">70</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/Kherson/32" class="w-10 h-10 rounded-full" alt="Kherson">
-        <span class="font-bold text-lg flex-1">Kherson</span>
-        <span class="text-lg font-bold text-blue-400">1,060 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">71</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/raisy1017/32" class="w-10 h-10 rounded-full" alt="raisy1017">
-        <span class="font-bold text-lg flex-1">raisy1017</span>
-        <span class="text-lg font-bold text-blue-400">990 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">72</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/whoanjae/32" class="w-10 h-10 rounded-full" alt="whoanjae">
-        <span class="font-bold text-lg flex-1">whoanjae</span>
-        <span class="text-lg font-bold text-blue-400">890 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">73</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/HUM_K/32" class="w-10 h-10 rounded-full" alt="HUM_K">
-        <span class="font-bold text-lg flex-1">HUM_K</span>
-        <span class="text-lg font-bold text-blue-400">855 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">74</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/dravenslayer/32" class="w-10 h-10 rounded-full" alt="dravenslayer">
-        <span class="font-bold text-lg flex-1">dravenslayer</span>
-        <span class="text-lg font-bold text-blue-400">610 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">75</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/yun2991/32" class="w-10 h-10 rounded-full" alt="yun2991">
-        <span class="font-bold text-lg flex-1">yun2991</span>
-        <span class="text-lg font-bold text-blue-400">460 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">76</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/happyface5321/32" class="w-10 h-10 rounded-full" alt="happyface5321">
-        <span class="font-bold text-lg flex-1">happyface5321</span>
-        <span class="text-lg font-bold text-blue-400">430 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">77</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/n2ght_/32" class="w-10 h-10 rounded-full" alt="n2ght_">
-        <span class="font-bold text-lg flex-1">n2ght_</span>
-        <span class="text-lg font-bold text-blue-400">420 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">78</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/sunground7/32" class="w-10 h-10 rounded-full" alt="sunground7">
-        <span class="font-bold text-lg flex-1">sunground7</span>
-        <span class="text-lg font-bold text-blue-400">350 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">79</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/DaeYooN/32" class="w-10 h-10 rounded-full" alt="DaeYooN">
-        <span class="font-bold text-lg flex-1">DaeYooN</span>
-        <span class="text-lg font-bold text-blue-400">230 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">80</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/hong8340/32" class="w-10 h-10 rounded-full" alt="hong8340">
-        <span class="font-bold text-lg flex-1">hong8340</span>
-        <span class="text-lg font-bold text-blue-400">150 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">81</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/poi0904/32" class="w-10 h-10 rounded-full" alt="poi0904">
-        <span class="font-bold text-lg flex-1">poi0904</span>
-        <span class="text-lg font-bold text-blue-400">140 RP</span>
-      </div>
-	  
-	  <div class="flex items-center space-x-6">
-        <span class="text-2xl font-bold w-8 text-center">82</span>
-        <img src="images/bronze.png" class="w-12 h-12" alt="브론즈">
-		<img src="https://mc-heads.net/avatar/bo_nnie/32" class="w-10 h-10 rounded-full" alt="bo_nnie">
-        <span class="font-bold text-lg flex-1">bo_nnie</span>
-        <span class="text-lg font-bold text-blue-400">100 RP</span>
-      </div>
+        <img src="images/bronze2.png" class="w-12 h-12" alt="브론즈">
+		<img src="https://mc-heads.net/avatar/ /32" class="w-10 h-10 rounded-full" alt="">
+        <span class="font-bold text-lg flex-1"></span>
+        <span class="text-lg font-bold text-blue-400">0 RP</span>
+      </div>
+
       <!-- 여기에 추가 데이터 계속 이어붙이면 돼 -->
       
     </div>
@@ -1641,18 +1064,18 @@ patchClose.addEventListener('click', () => {
 </script>
 <script>
   function updateSeasonCountdown() {
-    const endDate = new Date("2025-05-10"); // 시즌 종료일
+    const endDate = new Date("2025-06-14"); // 시즌 종료일
     const today = new Date();
     const diff = endDate.setHours(0,0,0,0) - today.setHours(0,0,0,0); // 날짜만 비교
     const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
     let text = "";
     if (days > 0) {
-      text = `시즌 1 종료일까지 D-${days} 남음`;
+      text = `시즌 2 종료일까지 D-${days} 남음`;
     } else if (days === 0) {
-      text = `시즌 1 오늘 종료됩니다!`;
+      text = `시즌 2 오늘 종료됩니다!`;
     } else {
-      text = `시즌 1이 종료되었습니다.`;
+      text = `시즌 2 이(가) 종료되었습니다.`;
     }
 
     document.getElementById("season-countdown").innerText = text;
